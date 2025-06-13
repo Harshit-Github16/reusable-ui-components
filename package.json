@@ -1,6 +1,6 @@
 {
   "name": "@harshit0150/reusable-ui-components",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "private": false,
   "type": "module",
   "main": "./dist/cjs/index.js",
