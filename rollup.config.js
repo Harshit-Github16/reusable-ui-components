@@ -2,6 +2,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import babel from '@rollup/plugin-babel';
 import typescript from 'rollup-plugin-typescript2';
+import postcss from 'rollup-plugin-postcss';
 
 export default {
   input: 'src/ui-components/index.jsx',
@@ -39,6 +40,14 @@ export default {
       babelHelpers: 'bundled',
       presets: ['@babel/preset-react', '@babel/preset-typescript'],
       extensions: ['.js', '.jsx', '.ts', '.tsx']
-    })
+    }),
+    postcss({
+      extract: true,
+      minimize: true,
+      sourceMap: true,
+      config: {
+        path: './postcss.config.mjs',
+      },
+    }),
   ]
 }; 

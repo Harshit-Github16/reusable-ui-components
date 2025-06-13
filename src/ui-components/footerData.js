@@ -1,11 +1,16 @@
-// import FacebookIcon from './icons/facebook.svg';
-// import TwitterIcon from '../images/twitter.svg';
-// import YoutubeIcon from '../images/youtube.svg';
-// import LinkedinIcon from '../images/linkedin.svg';
-// import InstagramIcon from '../images/instagram.svg';
-// import TelegramIcon from '../images/telegram.svg';
-// import WhatsappIcon from '../images/whatsapp_icon.svg';
+/**
+ * @typedef {Object} SocialLink
+ * @property {string} link - The social media URL
+ * @property {string} icon - The icon path/component
+ */
 
+/**
+ * @typedef {Object} FooterLink
+ * @property {string} label - The display text for the link
+ * @property {string} pageUrl - The URL the link points to
+ */
+
+/** @type {SocialLink[]} */
 export const socialLinks = [
   {
     link: 'https://www.facebook.com/niftytraderin',
@@ -27,16 +32,13 @@ export const socialLinks = [
     link: 'https://www.instagram.com/niftytraderindia',
     icon: '',
   },
-  // {
-  //   link: 'https://t.me/NiftyTraderIn',
-  //   icon: TelegramIcon,
-  // },
   {
     link: 'https://www.whatsapp.com/channel/0029VaiRoySATRShrjVYRu2O',
     icon: '',
   },
 ];
 
+/** @type {FooterLink[]} */
 export const helpfulLinks = [
   { label: 'About Us', pageUrl: 'https://www.niftytrader.in/about-us' },
   { label: 'Blog', pageUrl: 'https://www.niftytrader.in/content/' },
@@ -50,6 +52,7 @@ export const helpfulLinks = [
   { label: 'Write for us', pageUrl: 'https://www.niftytrader.in/content/write-for-us/' },
 ];
 
+/** @type {FooterLink[]} */
 export const otherLinks = [
   { label: 'Broker Directory', pageUrl: 'https://www.niftytrader.in/broker-directory' },
   { label: 'Opening Price Clues', pageUrl: 'https://www.niftytrader.in/opening-price-clues' },
@@ -59,6 +62,7 @@ export const otherLinks = [
   { label: 'IPO', pageUrl: 'https://www.niftytrader.in/ipo' },
 ];
 
+/** @type {FooterLink[]} */
 export const popularLinks = [
   { label: 'NSE Option Chain', pageUrl: 'https://www.niftytrader.in/nse-option-chain/nifty' },
   { label: 'Commodity Option Chain', pageUrl: 'https://www.niftytrader.in/commodities-option-chain-nse' },
