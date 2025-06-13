@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# @harshit0150/reusable-ui-components
 
-## Getting Started
+A reusable npm package containing React Header and Footer components (built with Tailwind CSS).
 
-First, run the development server:
+## Installation
+
+Run the following command in your project:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install @harshit0150/reusable-ui-components
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Import the components (Header and Footer) in your React application as follows:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```jsx
+import { Header, Footer } from '@harshit0150/reusable-ui-components';
 
-## Learn More
+function App() {
+  return (
+    <div>
+      <Header title="My App" />
+      {/* Your app content */}
+      <Footer />
+    </div>
+  );
+}
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Available Components
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Header
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+A responsive header component (with a title prop).
 
-## Deploy on Vercel
+Example:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```jsx
+import { Header } from '@harshit0150/reusable-ui-components';
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<Header title="Your App Title" />
+```
+
+### Footer
+
+A customizable footer component.
+
+Example:
+
+```jsx
+import { Footer } from '@harshit0150/reusable-ui-components';
+
+<Footer />
+```
+
+## Development
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/harshit0150/reusable-ui-components.git
+   cd reusable-ui-components
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. (Optional) Start the development server (if you have a Next.js demo app):
+   ```bash
+   npm run dev
+   ```
+
+4. Build the package (bundles your components):
+   ```bash
+   npm run build
+   ```
+
+5. Link the package to another project:
+   ```bash
+   npm link @harshit0150/reusable-ui-components
+   ```
+
+## Contributing
+
+Contributions are welcome! Feel free to submit a Pull Request.
+
+## License
+
+MIT © harshit0150
