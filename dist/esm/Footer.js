@@ -104,139 +104,139 @@ const silverPriceLinks = [{
 }];
 const Footer = () => {
   return /*#__PURE__*/React.createElement("footer", {
-    className: "tw:bg-[#1C1F2E] tw:text-white tw:py-8 tw:px-4"
+    className: "bg-[#1C1F2E] text-white py-8 px-4"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "tw:container tw:mx-auto"
+    className: "container mx-auto"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "tw:flex tw:flex-col md:tw:flex-row tw:justify-between tw:items-center tw:mb-8"
+    className: "flex flex-col md:flex-row justify-between items-center mb-8"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "tw:text-center md:tw:text-left tw:mb-6 md:tw:mb-0"
+    className: "text-center md:text-left mb-6 md:mb-0"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "tw:flex tw:items-center tw:justify-center md:tw:justify-start tw:mb-4"
+    className: "flex items-center justify-center md:justify-start mb-4"
   }, /*#__PURE__*/React.createElement("img", {
     src: "/logo.svg",
     alt: "NiftyTrader Logo",
-    className: "tw:h-10 tw:mr-3"
+    className: "h-10 mr-3"
   }), /*#__PURE__*/React.createElement("span", {
-    className: "tw:text-2xl tw:font-bold"
+    className: "text-2xl font-bold"
   }, "NiftyTrader")), /*#__PURE__*/React.createElement("h6", {
-    className: "tw:text-lg tw:font-semibold tw:mb-2"
+    className: "text-lg font-semibold mb-2"
   }, "Connect with Us"), /*#__PURE__*/React.createElement("div", {
-    className: "tw:flex tw:space-x-3 tw:justify-center md:tw:justify-start"
+    className: "flex space-x-3 justify-center md:justify-start"
   }, socialLinks.map((item, index) => /*#__PURE__*/React.createElement("a", {
     key: index,
     href: item.link,
     target: "_blank",
     rel: "noopener noreferrer",
-    className: "tw:w-9 tw:h-9 tw:rounded-full tw:flex tw:items-center tw:justify-center tw:bg-gray-700 tw:hover:bg-blue-600"
+    className: "w-9 h-9 rounded-full flex items-center justify-center bg-gray-700 hover:bg-blue-600"
   }, /*#__PURE__*/React.createElement("img", {
     src: item.icon,
     alt: "social icon",
-    className: "tw:w-5 tw:h-5"
+    className: "w-5 h-5"
   }))))), /*#__PURE__*/React.createElement("div", {
-    className: "tw:text-center md:tw:text-right"
+    className: "text-center md:text-right"
   }, /*#__PURE__*/React.createElement("h6", {
-    className: "tw:text-lg tw:font-semibold tw:mb-2"
+    className: "text-lg font-semibold mb-2"
   }, "SUBSCRIBE TO OUR NEWSLETTER"), /*#__PURE__*/React.createElement("p", {
-    className: "tw:text-sm tw:text-gray-400 tw:mb-4"
+    className: "text-sm text-gray-400 mb-4"
   }, "Sign up & receive the latest tips via email."), /*#__PURE__*/React.createElement("div", {
-    className: "tw:flex tw:justify-center md:tw:justify-end"
+    className: "flex justify-center md:justify-end"
   }, /*#__PURE__*/React.createElement("input", {
     type: "email",
     placeholder: "Enter Email Address",
-    className: "tw:bg-white tw:text-gray-900 tw:px-4 tw:py-2 tw:rounded-l-md tw:outline-none tw:w-full md:tw:w-auto"
+    className: "bg-white text-gray-900 px-4 py-2 rounded-l-md outline-none w-full md:w-auto"
   }), /*#__PURE__*/React.createElement("button", {
-    className: "tw:bg-blue-600 tw:hover:bg-blue-700 tw:text-white tw:font-bold tw:py-2 tw:px-4 tw:rounded-r-md"
+    className: "bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r-md"
   }, "Subscribe")), /*#__PURE__*/React.createElement("div", {
-    className: "tw:flex tw:justify-center md:tw:justify-end tw:mt-4 tw:space-x-3"
+    className: "flex justify-center md:justify-end mt-4 space-x-3"
   }, /*#__PURE__*/React.createElement("a", {
     href: "#"
   }, /*#__PURE__*/React.createElement("img", {
     src: "/icons/google-play.svg",
     alt: "Google Play",
-    className: "tw:h-10"
+    className: "h-10"
   })), /*#__PURE__*/React.createElement("a", {
     href: "#"
   }, /*#__PURE__*/React.createElement("img", {
     src: "/icons/app-store.svg",
     alt: "App Store",
-    className: "tw:h-10"
+    className: "h-10"
   }))))), /*#__PURE__*/React.createElement("hr", {
-    className: "tw:border-gray-700 tw:my-8"
+    className: "border-gray-700 my-8"
   }), /*#__PURE__*/React.createElement("div", {
-    className: "tw:grid tw:grid-cols-2 md:tw:grid-cols-3 lg:tw:grid-cols-6 tw:gap-8 tw:mb-8"
+    className: "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-8"
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h6", {
-    className: "tw:text-lg tw:font-semibold tw:mb-4 tw:border-b-2 tw:border-blue-600 tw:pb-2 tw:inline-block"
+    className: "text-lg font-semibold mb-4 border-b-2 border-blue-600 pb-2 inline-block"
   }, "Important Links"), /*#__PURE__*/React.createElement("ul", null, helpfulLinks.map((item, index) => /*#__PURE__*/React.createElement("li", {
     key: index,
-    className: "tw:mb-2"
+    className: "mb-2"
   }, /*#__PURE__*/React.createElement("a", {
     href: item.pageUrl,
-    className: "tw:text-gray-400 tw:hover:text-blue-400 tw:text-sm tw:flex tw:items-center"
+    className: "text-gray-400 hover:text-blue-400 text-sm flex items-center"
   }, /*#__PURE__*/React.createElement(FontAwesomeIcon, {
     icon: faChevronRight,
-    className: "tw:mr-2 tw:text-xs"
+    className: "mr-2 text-xs"
   }), item.label))))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h6", {
-    className: "tw:text-lg tw:font-semibold tw:mb-4 tw:border-b-2 tw:border-blue-600 tw:pb-2 tw:inline-block"
+    className: "text-lg font-semibold mb-4 border-b-2 border-blue-600 pb-2 inline-block"
   }, "Option Chain"), /*#__PURE__*/React.createElement("ul", null, optionChainLinks.map((item, index) => /*#__PURE__*/React.createElement("li", {
     key: index,
-    className: "tw:mb-2"
+    className: "mb-2"
   }, /*#__PURE__*/React.createElement("a", {
     href: item.pageUrl,
-    className: "tw:text-gray-400 tw:hover:text-blue-400 tw:text-sm tw:flex tw:items-center"
+    className: "text-gray-400 hover:text-blue-400 text-sm flex items-center"
   }, /*#__PURE__*/React.createElement(FontAwesomeIcon, {
     icon: faChevronRight,
-    className: "tw:mr-2 tw:text-xs"
+    className: "mr-2 text-xs"
   }), item.label))))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h6", {
-    className: "tw:text-lg tw:font-semibold tw:mb-4 tw:border-b-2 tw:border-blue-600 tw:pb-2 tw:inline-block"
+    className: "text-lg font-semibold mb-4 border-b-2 border-blue-600 pb-2 inline-block"
   }, "Tools"), /*#__PURE__*/React.createElement("ul", null, toolsLinks.map((item, index) => /*#__PURE__*/React.createElement("li", {
     key: index,
-    className: "tw:mb-2"
+    className: "mb-2"
   }, /*#__PURE__*/React.createElement("a", {
     href: item.pageUrl,
-    className: "tw:text-gray-400 tw:hover:text-blue-400 tw:text-sm tw:flex tw:items-center"
+    className: "text-gray-400 hover:text-blue-400 text-sm flex items-center"
   }, /*#__PURE__*/React.createElement(FontAwesomeIcon, {
     icon: faChevronRight,
-    className: "tw:mr-2 tw:text-xs"
+    className: "mr-2 text-xs"
   }), item.label))))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h6", {
-    className: "tw:text-lg tw:font-semibold tw:mb-4 tw:border-b-2 tw:border-blue-600 tw:pb-2 tw:inline-block"
+    className: "text-lg font-semibold mb-4 border-b-2 border-blue-600 pb-2 inline-block"
   }, "IPO"), /*#__PURE__*/React.createElement("ul", null, ipoLinks.map((item, index) => /*#__PURE__*/React.createElement("li", {
     key: index,
-    className: "tw:mb-2"
+    className: "mb-2"
   }, /*#__PURE__*/React.createElement("a", {
     href: item.pageUrl,
-    className: "tw:text-gray-400 tw:hover:text-blue-400 tw:text-sm tw:flex tw:items-center"
+    className: "text-gray-400 hover:text-blue-400 text-sm flex items-center"
   }, /*#__PURE__*/React.createElement(FontAwesomeIcon, {
     icon: faChevronRight,
-    className: "tw:mr-2 tw:text-xs"
+    className: "mr-2 text-xs"
   }), item.label))))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h6", {
-    className: "tw:text-lg tw:font-semibold tw:mb-4 tw:border-b-2 tw:border-blue-600 tw:pb-2 tw:inline-block"
+    className: "text-lg font-semibold mb-4 border-b-2 border-blue-600 pb-2 inline-block"
   }, "Gold Price"), /*#__PURE__*/React.createElement("ul", null, goldPriceLinks.map((item, index) => /*#__PURE__*/React.createElement("li", {
     key: index,
-    className: "tw:mb-2"
+    className: "mb-2"
   }, /*#__PURE__*/React.createElement("a", {
     href: item.pageUrl,
-    className: "tw:text-gray-400 tw:hover:text-blue-400 tw:text-sm tw:flex tw:items-center"
+    className: "text-gray-400 hover:text-blue-400 text-sm flex items-center"
   }, /*#__PURE__*/React.createElement(FontAwesomeIcon, {
     icon: faChevronRight,
-    className: "tw:mr-2 tw:text-xs"
+    className: "mr-2 text-xs"
   }), item.label))))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h6", {
-    className: "tw:text-lg tw:font-semibold tw:mb-4 tw:border-b-2 tw:border-blue-600 tw:pb-2 tw:inline-block"
+    className: "text-lg font-semibold mb-4 border-b-2 border-blue-600 pb-2 inline-block"
   }, "Silver Price"), /*#__PURE__*/React.createElement("ul", null, silverPriceLinks.map((item, index) => /*#__PURE__*/React.createElement("li", {
     key: index,
-    className: "tw:mb-2"
+    className: "mb-2"
   }, /*#__PURE__*/React.createElement("a", {
     href: item.pageUrl,
-    className: "tw:text-gray-400 tw:hover:text-blue-400 tw:text-sm tw:flex tw:items-center"
+    className: "text-gray-400 hover:text-blue-400 text-sm flex items-center"
   }, /*#__PURE__*/React.createElement(FontAwesomeIcon, {
     icon: faChevronRight,
-    className: "tw:mr-2 tw:text-xs"
+    className: "mr-2 text-xs"
   }), item.label)))))), /*#__PURE__*/React.createElement("hr", {
-    className: "tw:border-gray-700 tw:my-8"
+    className: "border-gray-700 my-8"
   }), /*#__PURE__*/React.createElement("div", {
-    className: "tw:text-center tw:text-gray-400 tw:text-sm"
+    className: "text-center text-gray-400 text-sm"
   }, /*#__PURE__*/React.createElement("p", null, "Copyright \xA9 ", /*#__PURE__*/React.createElement("span", {
-    className: "tw:text-blue-400"
+    className: "text-blue-400"
   }, "NiftyTrader"), " | All rights reserved ver 9.2.93"))));
 };
 
