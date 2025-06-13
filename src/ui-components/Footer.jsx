@@ -1,9 +1,8 @@
-"use client";
-
-import React, { useState } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { socialLinks, helpfulLinks, otherLinks, popularLinks } from './footerData';
+import NewsletterForm from './NewsletterForm.jsx';
 
 // JSDoc comments (optional) for prop types
 /**
@@ -41,8 +40,6 @@ const Footer = (props) => {
     copyright,
     className = ''
   } = props;
-
-  const [subscribeEmail, setSubscribeEmail] = useState('');
 
   return (
     <footer className={`bg-gray-900 text-white py-8 px-4 ${className}`}>
@@ -102,44 +99,20 @@ const Footer = (props) => {
           </div>
 
           {/* Newsletter Section */}
-          {newsletter && (
-            <div className="lg:flex-auto xl:mt-0 md:my-5 mx-auto lg:my-0 lg:w-auto sm:w-2/4 w-full text-start md:text-center lg:text-start sm:order-4 order-1 mb-6">
-              <h5 className="text-white text-base 2xl:text-xl font-semibold mb-2">
-                {newsletter.title || 'SUBSCRIBE TO OUR NEWSLETTER'}
-              </h5>
-              <p className="text-gray-400 text-[13px] mb-3">
-                {newsletter.description || 'Sign up & receive the latest tips via email.'}
-              </p>
-              <div className="flex items-center mb-4">
-                <input
-                  type="email"
-                  value={subscribeEmail}
-                  onChange={(e) => setSubscribeEmail(e.target.value)}
-                  className="bg-white text-gray-900 px-4 lg:py-3 py-2 outline-none rounded-tl-sm rounded-bl-sm mr-2 w-3/5"
-                  placeholder="Email Address"
-                />
-                <button
-                  onClick={() => newsletter.onSubmit(subscribeEmail)}
-                  className="bg-blue-600 rounded-tr-sm rounded-br-sm text-white lg:py-3 py-2 px-3 border border-transparent font-medium transition-all duration-300 hover:bg-transparent hover:text-blue-600 hover:border-blue-600"
-                >
-                  Subscribe
-                </button>
-              </div>
+          {newsletter && <NewsletterForm {...newsletter} />}
 
-              {/* App Store Links (if provided) */}
-              {appStoreLinks && (
-                <div className="hidden sm:flex items-center lg:justify-start justify-center">
-                  {appStoreLinks.playStore && (
-                    <a href={appStoreLinks.playStore} target="_blank" rel="noopener noreferrer">
-                      <img src="/play-store.png" alt="Play Store" className="mr-3 cursor-pointer h-[45px]" />
-                    </a>
-                  )}
-                  {appStoreLinks.appStore && (
-                    <a href={appStoreLinks.appStore} target="_blank" rel="noopener noreferrer">
-                      <img src="/app-store.png" alt="App Store" className="mr-3 cursor-pointer h-[45px]" />
-                    </a>
-                  )}
-                </div>
+          {/* App Store Links (if provided) */}
+          {appStoreLinks && (
+            <div className="hidden sm:flex items-center lg:justify-start justify-center">
+              {appStoreLinks.playStore && (
+                <a href={appStoreLinks.playStore} target="_blank" rel="noopener noreferrer">
+                  <img src="/play-store.png" alt="Play Store" className="mr-3 cursor-pointer h-[45px]" />
+                </a>
+              )}
+              {appStoreLinks.appStore && (
+                <a href={appStoreLinks.appStore} target="_blank" rel="noopener noreferrer">
+                  <img src="/app-store.png" alt="App Store" className="mr-3 cursor-pointer h-[45px]" />
+                </a>
               )}
             </div>
           )}

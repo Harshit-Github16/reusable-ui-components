@@ -2,46 +2,43 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import babel from '@rollup/plugin-babel';
 import typescript from 'rollup-plugin-typescript2';
-import { defineConfig } from 'rollup';
-import { readFileSync } from 'fs';
 
-const packageJson = JSON.parse(readFileSync(new URL('./package.json', import.meta.url)));
-
-export default defineConfig({
-  input: 'src/ui-components/index.tsx',
+export default {
+  input: 'src/ui-components/index.jsx',
   output: [
     {
-      file: packageJson.main,
+      dir: 'dist/cjs',
       format: 'cjs',
       sourcemap: true,
+      preserveModules: true,
+      preserveModulesRoot: 'src/ui-components'
     },
     {
-      file: packageJson.module,
+      dir: 'dist/esm',
       format: 'esm',
       sourcemap: true,
-    },
-  ],
-  plugins: [
-    resolve({
-      extensions: ['.js', '.jsx', '.ts', '.tsx']
-    }),
-    commonjs(),
-    typescript({
-      tsconfig: './tsconfig.json',
-      useTsconfigDeclarationDir: true
-    }),
-    babel({ 
-      babelHelpers: 'bundled', 
-      exclude: 'node_modules/**', 
-      presets: ['@babel/preset-react', '@babel/preset-typescript'],
-      extensions: ['.js', '.jsx', '.ts', '.tsx']
-    }),
+      preserveModules: true,
+      preserveModulesRoot: 'src/ui-components'
+    }
   ],
   external: [
-    'react', 
+    'react',
     'react-dom',
     '@fortawesome/fontawesome-svg-core',
     '@fortawesome/free-solid-svg-icons',
     '@fortawesome/react-fontawesome'
   ],
-}); 
+  plugins: [
+    resolve(),
+    commonjs(),
+    typescript({
+      tsconfig: './tsconfig.json',
+      useTsconfigDeclarationDir: true
+    }),
+    babel({
+      babelHelpers: 'bundled',
+      presets: ['@babel/preset-react', '@babel/preset-typescript'],
+      extensions: ['.js', '.jsx', '.ts', '.tsx']
+    })
+  ]
+}; 
