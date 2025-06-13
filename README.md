@@ -1,6 +1,6 @@
 # @harshit0150/reusable-ui-components
 
-A reusable npm package containing React Header and Footer components (built with Tailwind CSS).
+Reusable Header and Footer components built with Tailwind CSS for React/Next.js projects.
 
 ## Installation
 
@@ -12,21 +12,39 @@ npm install @harshit0150/reusable-ui-components
 
 ## Usage
 
-Import the components (Header and Footer) in your React application as follows:
+First, import the CSS in your main application file (e.g., `_app.js`, `layout.js`, or `index.js`):
 
-```jsx
+```javascript
+// Import the CSS
+import '@harshit0150/reusable-ui-components/styles.css';
+```
+
+Then use the components:
+
+```javascript
 import { Header, Footer } from '@harshit0150/reusable-ui-components';
 
 function App() {
   return (
-    <div>
-      <Header title="My App" />
-      {/* Your app content */}
+    <>
+      <Header />
+      {/* Your content */}
       <Footer />
-    </div>
+    </>
   );
 }
 ```
+
+## Requirements
+- React 17+
+- Tailwind CSS (should be set up in your project)
+
+## Note
+Make sure your project has Tailwind CSS configured. The components use Tailwind classes, so you need to have Tailwind CSS set up in your project.
+
+---
+
+Feel free to customize the components as needed!
 
 ## Available Components
 
