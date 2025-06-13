@@ -2,8 +2,7 @@ import { Poppins } from 'next/font/google'
 import './globals.css'
 import MainWrapper from '../components/Layout/MainWrapper'
 import 'react-toastify/dist/ReactToastify.css'
-import ClientFooter from '../components/ClientFooter'
-import Header from '../components/Header'
+import { Header, Footer } from '../src/ui-components/index.jsx'
 
 const poppins = Poppins({
   weight: ['400', '500', '600', '700'],
@@ -21,12 +20,12 @@ export default function RootLayout({ children }) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
         <script dangerouslySetInnerHTML={{ __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5688GVQ');` }} />
       </head>
-      <body className={`bg-[#F8FBFF] dark:bg-[#0d1425] scroll-smooth ${poppins.className}`}>
+      <body className={`tw:bg-[#F8FBFF] dark:tw:bg-[#0d1425] tw:scroll-smooth ${poppins.className}`}>
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5688GVQ" height="0" width="0" style={{ display: 'none', visibility: 'hidden' }} /></noscript>
         {/* <MainWrapper>{children}</MainWrapper> */}
         <Header />
         {children}
-        <ClientFooter />
+        <Footer />
         {/* {children} */}
       </body>
     </html>
