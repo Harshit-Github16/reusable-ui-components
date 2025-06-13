@@ -49,6 +49,8 @@ A customizable footer component.
 Example:
 
 ```jsx
+"use client";
+import React, { useState } from 'react';
 import { Footer } from '@harshit0150/reusable-ui-components';
 
 <Footer />

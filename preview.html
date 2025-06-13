@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Components Preview</title>
+    <script src="https://unpkg.com/react@19/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@19/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        // Import the components
+        const { Header, Footer } = window.Components;
+
+        function App() {
+            return (
+                <div className="min-h-screen flex flex-col">
+                    <Header />
+                    <main className="flex-grow p-4">
+                        <h1 className="text-2xl font-bold mb-4">Content Area</h1>
+                        <p>This is where your main content would go.</p>
+                    </main>
+                    <Footer />
+                </div>
+            );
+        }
+
+        // Load the components
+        fetch('/dist/index.js')
+            .then(response => response.text())
+            .then(code => {
+                // Create a script element to load the components
+                const script = document.createElement('script');
+                script.textContent = code;
+                document.head.appendChild(script);
+
+                // Render the app
+                ReactDOM.render(<App />, document.getElementById('root'));
+            })
+            .catch(error => {
+                console.error('Error loading components:', error);
+                document.getElementById('root').innerHTML = 'Error loading components. Please build the project first.';
+            });
+    </script>
+</body>
+</html> 

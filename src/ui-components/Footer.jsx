@@ -1,52 +1,48 @@
+"use client";
+
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { socialLinks, helpfulLinks, otherLinks, popularLinks } from './footerData';
 
-// Types for the footer data
-export interface FooterLink {
-  label: string;
-  pageUrl: string;
-}
+// JSDoc comments (optional) for prop types
+/**
+ * @typedef {Object} FooterLink
+ * @property {string} label – The label of the link.
+ * @property {string} pageUrl – The URL of the link.
+ */
 
-export interface SocialLink {
-  link: string;
-  icon: string;
-}
+/**
+ * @typedef {Object} SocialLink
+ * @property {string} link – The social link URL.
+ * @property {string} icon – (Optional) The icon (e.g. an empty string or an image src).
+ */
 
-export interface FooterProps {
-  helpfulLinks: FooterLink[];
-  otherLinks: FooterLink[];
-  popularLinks: FooterLink[];
-  socialLinks: SocialLink[];
-  appStoreLinks?: {
-    playStore?: string;
-    appStore?: string;
-  };
-  newsletter?: {
-    title?: string;
-    description?: string;
-    onSubmit: (email: string) => void;
-  };
-  copyright?: {
-    text: string;
-    link?: string;
-    linkText?: string;
-    version?: string;
-  };
-  className?: string;
-}
+/**
+ * @typedef {Object} FooterProps
+ * @property {FooterLink[]} [helpfulLinks] – Array of helpful links (defaults to imported helpfulLinks).
+ * @property {FooterLink[]} [otherLinks] – Array of other links (defaults to imported otherLinks).
+ * @property {FooterLink[]} [popularLinks] – Array of popular links (defaults to imported popularLinks).
+ * @property {SocialLink[]} [socialLinks] – Array of social links (defaults to imported socialLinks).
+ * @property {Object} [appStoreLinks] – (Optional) Object containing playStore and appStore URLs.
+ * @property {Object} [newsletter] – (Optional) Object for newsletter subscription (e.g. { title, description, onSubmit }).
+ * @property {Object} [copyright] – (Optional) Object for copyright info (e.g. { text, link, linkText, version }).
+ * @property {string} [className] – (Optional) Additional CSS class.
+ */
 
-const Footer: React.FC<FooterProps> = ({
-  helpfulLinks,
-  otherLinks,
-  popularLinks,
-  socialLinks,
-  appStoreLinks,
-  newsletter,
-  copyright,
-  className = ''
-}) => {
-  const [subscribeEmail, setSubscribeEmail] = useState<string>('');
+const Footer = (props) => {
+  const {
+    helpfulLinks: propHelpfulLinks = helpfulLinks,
+    otherLinks: propOtherLinks = otherLinks,
+    popularLinks: propPopularLinks = popularLinks,
+    socialLinks: propSocialLinks = socialLinks,
+    appStoreLinks,
+    newsletter,
+    copyright,
+    className = ''
+  } = props;
+
+  const [subscribeEmail, setSubscribeEmail] = useState('');
 
   return (
     <footer className={`bg-gray-900 text-white py-8 px-4 ${className}`}>
@@ -56,7 +52,7 @@ const Footer: React.FC<FooterProps> = ({
           <div className="flex-auto sm:w-auto w-6/12 sm:order-1 order-3 mb-6">
             <h5 className="text-white text-base 2xl:text-xl font-semibold mb-2">HELPFUL LINKS</h5>
             <ul>
-              {helpfulLinks.map((item, index) => (
+              {propHelpfulLinks.map((item, index) => (
                 <li key={index}>
                   <a
                     href={item.pageUrl}
@@ -74,7 +70,7 @@ const Footer: React.FC<FooterProps> = ({
           <div className="flex-auto sm:w-auto w-6/12 sm:order-2 order-4 mb-6">
             <h5 className="text-white text-base 2xl:text-xl font-semibold mb-2">OTHER LINKS</h5>
             <ul>
-              {otherLinks.map((item, index) => (
+              {propOtherLinks.map((item, index) => (
                 <li key={index}>
                   <a
                     href={item.pageUrl}
@@ -92,7 +88,7 @@ const Footer: React.FC<FooterProps> = ({
           <div className="flex-auto sm:order-3 order-2 w-full sm:w-auto mb-6">
             <h5 className="text-white text-base 2xl:text-xl font-semibold mb-2">POPULAR LINKS</h5>
             <ul className="sm:block flex justify-between">
-              {popularLinks.map((item, index) => (
+              {propPopularLinks.map((item, index) => (
                 <li key={index}>
                   <a
                     href={item.pageUrl}
@@ -130,7 +126,7 @@ const Footer: React.FC<FooterProps> = ({
                 </button>
               </div>
 
-              {/* App Store Links */}
+              {/* App Store Links (if provided) */}
               {appStoreLinks && (
                 <div className="hidden sm:flex items-center lg:justify-start justify-center">
                   {appStoreLinks.playStore && (
@@ -149,7 +145,7 @@ const Footer: React.FC<FooterProps> = ({
           )}
         </div>
 
-        {/* Mobile App Store Links */}
+        {/* Mobile App Store Links (if provided) */}
         {appStoreLinks && (
           <div className="sm:hidden flex items-center my-5 justify-center">
             {appStoreLinks.playStore && (
@@ -167,7 +163,7 @@ const Footer: React.FC<FooterProps> = ({
 
         {/* Social Links */}
         <ul className="flex justify-center gap-4 mt-5 md:mt-0">
-          {socialLinks.map((item, index) => (
+          {propSocialLinks.map((item, index) => (
             <li key={index}>
               <a
                 target="_blank"
@@ -199,20 +195,16 @@ const Footer: React.FC<FooterProps> = ({
           ))}
         </ul>
 
-        {/* Copyright Section */}
+        {/* Copyright (if provided) */}
         {copyright && (
-          <div className="m-auto border-t md:w-2/4 mt-4">
-            <div className="text-gray-400 text-center mt-4">
-              Copyright ©{' '}
-              {copyright.link ? (
-                <a href={copyright.link} className="text-blue-400">
-                  {copyright.linkText}
-                </a>
-              ) : (
-                copyright.text
-              )}
-              {copyright.version && <p className="mb-0">All rights reserved ver {copyright.version}</p>}
-            </div>
+          <div className="mt-5 text-center text-gray-400 text-xs">
+            {copyright.text}
+            {copyright.link && copyright.linkText && (
+              <a href={copyright.link} target="_blank" rel="noopener noreferrer" className="underline ml-1">
+                {copyright.linkText}
+              </a>
+            )}
+            {copyright.version && <span className="ml-1">(v{copyright.version})</span>}
           </div>
         )}
       </div>
