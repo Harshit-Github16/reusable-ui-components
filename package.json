@@ -1,20 +1,19 @@
 {
   "name": "@harshit0150/reusable-ui-components",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "private": false,
   "type": "module",
-  "main": "./dist/index.js",
-  "module": "./src/ui-components/index.jsx",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./src/ui-components/index.jsx",
-      "require": "./dist/index.js"
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
     }
   },
   "files": [
-    "dist",
-    "src/ui-components"
+    "dist"
   ],
   "scripts": {
     "dev": "next dev --turbopack",
