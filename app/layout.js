@@ -3,6 +3,7 @@ import './globals.css'
 import MainWrapper from '../components/Layout/MainWrapper'
 import 'react-toastify/dist/ReactToastify.css'
 import ClientFooter from '../components/ClientFooter'
+import Header from '../components/Header'
 
 const poppins = Poppins({
   weight: ['400', '500', '600', '700'],
@@ -23,7 +24,7 @@ export default function RootLayout({ children }) {
       <body className={`bg-[#F8FBFF] dark:bg-[#0d1425] scroll-smooth ${poppins.className}`}>
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5688GVQ" height="0" width="0" style={{ display: 'none', visibility: 'hidden' }} /></noscript>
         {/* <MainWrapper>{children}</MainWrapper> */}
-        {/* <Header /> */}
+        <Header />
         {children}
         <ClientFooter />
         {/* {children} */}

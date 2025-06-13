@@ -2,7 +2,9 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { socialLinks, helpfulLinks, otherLinks, popularLinks } from './footerData';
-import NewsletterForm from './NewsletterForm.jsx';
+import dynamic from 'next/dynamic';
+
+const NewsletterForm = dynamic(() => import('./NewsletterForm.jsx'), { ssr: false });
 
 // JSDoc comments (optional) for prop types
 /**

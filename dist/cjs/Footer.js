@@ -4,7 +4,13 @@ var React = require('react');
 var reactFontawesome = require('@fortawesome/react-fontawesome');
 var freeSolidSvgIcons = require('@fortawesome/free-solid-svg-icons');
 var footerData = require('./footerData.js');
-var NewsletterForm = require('./NewsletterForm.js');
+var dynamic = require('./node_modules/next/dynamic.js');
+
+function _interopNamespaceDefaultOnly (e) { return Object.freeze({ __proto__: null, default: e }); }
+
+const NewsletterForm = dynamic(() => Promise.resolve().then(function () { return /*#__PURE__*/_interopNamespaceDefaultOnly(require('./NewsletterForm.js')); }), {
+  ssr: false
+});
 
 // JSDoc comments (optional) for prop types
 /**

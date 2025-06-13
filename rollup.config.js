@@ -49,5 +49,13 @@ export default {
         path: './postcss.config.mjs',
       },
     }),
-  ]
+  ],
+  onwarn: function (warning, warn) {
+    // Suppress specific warnings that are safe to ignore for this build setup
+    if (warning.code === 'MODULE_LEVEL_DIRECTIVE') {
+      return; // Ignore 'use client' and similar directives
+    }
+    // Pass all other warnings through
+    warn(warning);
+  }
 }; 
