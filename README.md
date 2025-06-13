@@ -78,7 +78,7 @@ import { Footer } from '@harshit0150/reusable-ui-components';
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/harshit0150/reusable-ui-components.git
+   git clone https://github.com/Harshit-Github16/reusable-ui-components.git
    cd reusable-ui-components
    ```
 
