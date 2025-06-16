@@ -46,7 +46,7 @@ export default {
     postcss({
       extract: {
         dir: 'dist',
-        name: 'styles.css'
+        name: '[name].css'
       },
       minimize: true,
       sourceMap: true,
@@ -55,7 +55,8 @@ export default {
       },
       modules: false,
       autoModules: false,
-      inject: false
+      inject: false,
+      writeDefinitions: true
     }),
   ],
   onwarn: function (warning, warn) {
