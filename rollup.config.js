@@ -43,7 +43,7 @@ export default {
       extensions: ['.js', '.jsx', '.ts', '.tsx']
     }),
     postcss({
-      extract: true,
+      extract: 'styles.css',
       minimize: true,
       sourceMap: true,
       config: {
