@@ -5,21 +5,21 @@ import typescript from 'rollup-plugin-typescript2';
 import postcss from 'rollup-plugin-postcss';
 
 export default {
-  input: 'src/ui-components/index.jsx',
+  input: 'src/components/index.tsx',
   output: [
     {
       dir: 'dist/cjs',
       format: 'cjs',
       sourcemap: true,
       preserveModules: true,
-      preserveModulesRoot: 'src/ui-components'
+      preserveModulesRoot: 'src/components'
     },
     {
       dir: 'dist/esm',
       format: 'esm',
       sourcemap: true,
       preserveModules: true,
-      preserveModulesRoot: 'src/ui-components'
+      preserveModulesRoot: 'src/components'
     }
   ],
   external: [

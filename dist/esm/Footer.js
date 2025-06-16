@@ -1,243 +1,84 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import Link from './node_modules/next/link.js';
 
-const socialLinks = [{
-  link: "#",
-  icon: "/icons/facebook.svg"
-}, {
-  link: "#",
-  icon: "/icons/twitter.svg"
-}, {
-  link: "#",
-  icon: "/icons/youtube.svg"
-}, {
-  link: "#",
-  icon: "/icons/linkedin.svg"
-}, {
-  link: "#",
-  icon: "/icons/instagram.svg"
-}, {
-  link: "#",
-  icon: "/icons/whatsapp.svg"
-}];
-const helpfulLinks = [{
-  label: "About Us",
-  pageUrl: "#"
-}, {
-  label: "Nifty Contributors",
-  pageUrl: "#"
-}, {
-  label: "Privacy Policy",
-  pageUrl: "#"
-}, {
-  label: "Opening Price Clues",
-  pageUrl: "#"
-}, {
-  label: "Sensex PCR Ratio",
-  pageUrl: "#"
-}];
-const optionChainLinks = [{
-  label: "Contact Us",
-  pageUrl: "#"
-}, {
-  label: "Nifty Open Interest",
-  pageUrl: "#"
-}, {
-  label: "Option Backtesting",
-  pageUrl: "#"
-}, {
-  label: "Option Trading Strategies",
-  pageUrl: "#"
-}];
-const toolsLinks = [{
-  label: "Write for Us",
-  pageUrl: "#"
-}, {
-  label: "Terms & Conditions",
-  pageUrl: "#"
-}, {
-  label: "BSE Sensex Today",
-  pageUrl: "#"
-}, {
-  label: "Stock Market News",
-  pageUrl: "#"
-}];
-const ipoLinks = [{
-  label: "NiftyTrader News",
-  pageUrl: "#"
-}, {
-  label: "India VIX",
-  pageUrl: "#"
-}, {
-  label: "F&O Ban List",
-  pageUrl: "#"
-}, {
-  label: "Refund & Cancellation Policy",
-  pageUrl: "#"
-}];
-const goldPriceLinks = [{
-  label: "Disclaimer",
-  pageUrl: "#"
-}, {
-  label: "Advance Decline Ratio",
-  pageUrl: "#"
-}, {
-  label: "Limitation of Liability",
-  pageUrl: "#"
-}, {
-  label: "NSE Top Losers",
-  pageUrl: "#"
-}];
-const silverPriceLinks = [{
-  label: "GIFT Nifty",
-  pageUrl: "#"
-}, {
-  label: "SGX Nifty",
-  pageUrl: "#"
-}, {
-  label: "NSE Top Gainers",
-  pageUrl: "#"
-}, {
-  label: "Nifty PCR Ratio",
-  pageUrl: "#"
-}];
-const Footer = () => {
+var Footer = function () {
   return /*#__PURE__*/React.createElement("footer", {
-    className: "bg-[#1C1F2E] text-white py-8 px-4"
+    className: "bg-gray-900 text-white"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "container mx-auto"
+    className: "container mx-auto px-4 py-12"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "flex flex-col md:flex-row justify-between items-center mb-8"
+    className: "grid grid-cols-1 md:grid-cols-4 gap-8"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "text-center md:text-left mb-6 md:mb-0"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "flex items-center justify-center md:justify-start mb-4"
-  }, /*#__PURE__*/React.createElement("img", {
-    src: "/logo.svg",
-    alt: "NiftyTrader Logo",
-    className: "h-10 mr-3"
-  }), /*#__PURE__*/React.createElement("span", {
-    className: "text-2xl font-bold"
-  }, "NiftyTrader")), /*#__PURE__*/React.createElement("h6", {
-    className: "text-lg font-semibold mb-2"
-  }, "Connect with Us"), /*#__PURE__*/React.createElement("div", {
-    className: "flex space-x-3 justify-center md:justify-start"
-  }, socialLinks.map((item, index) => /*#__PURE__*/React.createElement("a", {
-    key: index,
-    href: item.link,
-    target: "_blank",
-    rel: "noopener noreferrer",
-    className: "w-9 h-9 rounded-full flex items-center justify-center bg-gray-700 hover:bg-blue-600"
-  }, /*#__PURE__*/React.createElement("img", {
-    src: item.icon,
-    alt: "social icon",
-    className: "w-5 h-5"
-  }))))), /*#__PURE__*/React.createElement("div", {
-    className: "text-center md:text-right"
-  }, /*#__PURE__*/React.createElement("h6", {
-    className: "text-lg font-semibold mb-2"
-  }, "SUBSCRIBE TO OUR NEWSLETTER"), /*#__PURE__*/React.createElement("p", {
-    className: "text-sm text-gray-400 mb-4"
-  }, "Sign up & receive the latest tips via email."), /*#__PURE__*/React.createElement("div", {
-    className: "flex justify-center md:justify-end"
-  }, /*#__PURE__*/React.createElement("input", {
-    type: "email",
-    placeholder: "Enter Email Address",
-    className: "bg-white text-gray-900 px-4 py-2 rounded-l-md outline-none w-full md:w-auto"
-  }), /*#__PURE__*/React.createElement("button", {
-    className: "bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r-md"
-  }, "Subscribe")), /*#__PURE__*/React.createElement("div", {
-    className: "flex justify-center md:justify-end mt-4 space-x-3"
+    className: "space-y-4"
+  }, /*#__PURE__*/React.createElement("h3", {
+    className: "text-xl font-bold"
+  }, "Company Name"), /*#__PURE__*/React.createElement("p", {
+    className: "text-gray-400"
+  }, "Making the world a better place through modern design and technology.")), /*#__PURE__*/React.createElement("div", {
+    className: "space-y-4"
+  }, /*#__PURE__*/React.createElement("h3", {
+    className: "text-xl font-bold"
+  }, "Quick Links"), /*#__PURE__*/React.createElement("ul", {
+    className: "space-y-2"
+  }, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Link, {
+    href: "/about",
+    className: "text-gray-400 hover:text-white transition-colors"
+  }, "About Us")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Link, {
+    href: "/services",
+    className: "text-gray-400 hover:text-white transition-colors"
+  }, "Services")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Link, {
+    href: "/contact",
+    className: "text-gray-400 hover:text-white transition-colors"
+  }, "Contact")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Link, {
+    href: "/privacy",
+    className: "text-gray-400 hover:text-white transition-colors"
+  }, "Privacy Policy")))), /*#__PURE__*/React.createElement("div", {
+    className: "space-y-4"
+  }, /*#__PURE__*/React.createElement("h3", {
+    className: "text-xl font-bold"
+  }, "Contact Us"), /*#__PURE__*/React.createElement("ul", {
+    className: "space-y-2 text-gray-400"
+  }, /*#__PURE__*/React.createElement("li", null, "123 Business Street"), /*#__PURE__*/React.createElement("li", null, "City, State 12345"), /*#__PURE__*/React.createElement("li", null, "Phone: (123) 456-7890"), /*#__PURE__*/React.createElement("li", null, "Email: info@company.com"))), /*#__PURE__*/React.createElement("div", {
+    className: "space-y-4"
+  }, /*#__PURE__*/React.createElement("h3", {
+    className: "text-xl font-bold"
+  }, "Follow Us"), /*#__PURE__*/React.createElement("div", {
+    className: "flex space-x-4"
   }, /*#__PURE__*/React.createElement("a", {
-    href: "#"
-  }, /*#__PURE__*/React.createElement("img", {
-    src: "/icons/google-play.svg",
-    alt: "Google Play",
-    className: "h-10"
-  })), /*#__PURE__*/React.createElement("a", {
-    href: "#"
-  }, /*#__PURE__*/React.createElement("img", {
-    src: "/icons/app-store.svg",
-    alt: "App Store",
-    className: "h-10"
-  }))))), /*#__PURE__*/React.createElement("hr", {
-    className: "border-gray-700 my-8"
-  }), /*#__PURE__*/React.createElement("div", {
-    className: "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-8"
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h6", {
-    className: "text-lg font-semibold mb-4 border-b-2 border-blue-600 pb-2 inline-block"
-  }, "Important Links"), /*#__PURE__*/React.createElement("ul", null, helpfulLinks.map((item, index) => /*#__PURE__*/React.createElement("li", {
-    key: index,
-    className: "mb-2"
-  }, /*#__PURE__*/React.createElement("a", {
-    href: item.pageUrl,
-    className: "text-gray-400 hover:text-blue-400 text-sm flex items-center"
-  }, /*#__PURE__*/React.createElement(FontAwesomeIcon, {
-    icon: faChevronRight,
-    className: "mr-2 text-xs"
-  }), item.label))))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h6", {
-    className: "text-lg font-semibold mb-4 border-b-2 border-blue-600 pb-2 inline-block"
-  }, "Option Chain"), /*#__PURE__*/React.createElement("ul", null, optionChainLinks.map((item, index) => /*#__PURE__*/React.createElement("li", {
-    key: index,
-    className: "mb-2"
-  }, /*#__PURE__*/React.createElement("a", {
-    href: item.pageUrl,
-    className: "text-gray-400 hover:text-blue-400 text-sm flex items-center"
-  }, /*#__PURE__*/React.createElement(FontAwesomeIcon, {
-    icon: faChevronRight,
-    className: "mr-2 text-xs"
-  }), item.label))))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h6", {
-    className: "text-lg font-semibold mb-4 border-b-2 border-blue-600 pb-2 inline-block"
-  }, "Tools"), /*#__PURE__*/React.createElement("ul", null, toolsLinks.map((item, index) => /*#__PURE__*/React.createElement("li", {
-    key: index,
-    className: "mb-2"
-  }, /*#__PURE__*/React.createElement("a", {
-    href: item.pageUrl,
-    className: "text-gray-400 hover:text-blue-400 text-sm flex items-center"
-  }, /*#__PURE__*/React.createElement(FontAwesomeIcon, {
-    icon: faChevronRight,
-    className: "mr-2 text-xs"
-  }), item.label))))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h6", {
-    className: "text-lg font-semibold mb-4 border-b-2 border-blue-600 pb-2 inline-block"
-  }, "IPO"), /*#__PURE__*/React.createElement("ul", null, ipoLinks.map((item, index) => /*#__PURE__*/React.createElement("li", {
-    key: index,
-    className: "mb-2"
-  }, /*#__PURE__*/React.createElement("a", {
-    href: item.pageUrl,
-    className: "text-gray-400 hover:text-blue-400 text-sm flex items-center"
-  }, /*#__PURE__*/React.createElement(FontAwesomeIcon, {
-    icon: faChevronRight,
-    className: "mr-2 text-xs"
-  }), item.label))))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h6", {
-    className: "text-lg font-semibold mb-4 border-b-2 border-blue-600 pb-2 inline-block"
-  }, "Gold Price"), /*#__PURE__*/React.createElement("ul", null, goldPriceLinks.map((item, index) => /*#__PURE__*/React.createElement("li", {
-    key: index,
-    className: "mb-2"
-  }, /*#__PURE__*/React.createElement("a", {
-    href: item.pageUrl,
-    className: "text-gray-400 hover:text-blue-400 text-sm flex items-center"
-  }, /*#__PURE__*/React.createElement(FontAwesomeIcon, {
-    icon: faChevronRight,
-    className: "mr-2 text-xs"
-  }), item.label))))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h6", {
-    className: "text-lg font-semibold mb-4 border-b-2 border-blue-600 pb-2 inline-block"
-  }, "Silver Price"), /*#__PURE__*/React.createElement("ul", null, silverPriceLinks.map((item, index) => /*#__PURE__*/React.createElement("li", {
-    key: index,
-    className: "mb-2"
-  }, /*#__PURE__*/React.createElement("a", {
-    href: item.pageUrl,
-    className: "text-gray-400 hover:text-blue-400 text-sm flex items-center"
-  }, /*#__PURE__*/React.createElement(FontAwesomeIcon, {
-    icon: faChevronRight,
-    className: "mr-2 text-xs"
-  }), item.label)))))), /*#__PURE__*/React.createElement("hr", {
-    className: "border-gray-700 my-8"
-  }), /*#__PURE__*/React.createElement("div", {
-    className: "text-center text-gray-400 text-sm"
-  }, /*#__PURE__*/React.createElement("p", null, "Copyright \xA9 ", /*#__PURE__*/React.createElement("span", {
-    className: "text-blue-400"
-  }, "NiftyTrader"), " | All rights reserved ver 9.2.93"))));
+    href: "#",
+    className: "text-gray-400 hover:text-white transition-colors"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "sr-only"
+  }, "Facebook"), /*#__PURE__*/React.createElement("svg", {
+    className: "h-6 w-6",
+    fill: "currentColor",
+    viewBox: "0 0 24 24"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+  }))), /*#__PURE__*/React.createElement("a", {
+    href: "#",
+    className: "text-gray-400 hover:text-white transition-colors"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "sr-only"
+  }, "Twitter"), /*#__PURE__*/React.createElement("svg", {
+    className: "h-6 w-6",
+    fill: "currentColor",
+    viewBox: "0 0 24 24"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+  }))), /*#__PURE__*/React.createElement("a", {
+    href: "#",
+    className: "text-gray-400 hover:text-white transition-colors"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "sr-only"
+  }, "LinkedIn"), /*#__PURE__*/React.createElement("svg", {
+    className: "h-6 w-6",
+    fill: "currentColor",
+    viewBox: "0 0 24 24"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+  })))))), /*#__PURE__*/React.createElement("div", {
+    className: "mt-8 pt-8 border-t border-gray-800 text-center text-gray-400"
+  }, /*#__PURE__*/React.createElement("p", null, "\xA9 ", new Date().getFullYear(), " Company Name. All rights reserved."))));
 };
 
 export { Footer as default };
