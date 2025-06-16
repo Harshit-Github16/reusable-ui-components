@@ -44,10 +44,6 @@ export default {
       extensions: ['.js', '.jsx', '.ts', '.tsx']
     }),
     postcss({
-      extract: {
-        dir: 'dist',
-        name: '[name].css'
-      },
       minimize: true,
       sourceMap: true,
       config: {
@@ -56,8 +52,8 @@ export default {
       modules: false,
       autoModules: false,
       inject: false,
-      writeDefinitions: true
-    }),
+      writeDefinitions: false
+    })
   ],
   onwarn: function (warning, warn) {
     // Suppress specific warnings that are safe to ignore for this build setup
