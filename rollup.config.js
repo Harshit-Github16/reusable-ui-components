@@ -44,12 +44,18 @@ export default {
       extensions: ['.js', '.jsx', '.ts', '.tsx']
     }),
     postcss({
-      extract: 'styles.css',
+      extract: {
+        dir: 'dist',
+        name: 'styles.css'
+      },
       minimize: true,
       sourceMap: true,
       config: {
         path: './postcss.config.mjs',
       },
+      modules: false,
+      autoModules: false,
+      inject: false
     }),
   ],
   onwarn: function (warning, warn) {

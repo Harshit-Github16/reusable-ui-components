@@ -9,15 +9,17 @@
   "exports": {
     ".": {
       "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.js"
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/index.d.ts"
     },
     "./styles.css": {
-      "import": "./dist/esm/styles.css",
-      "require": "./dist/cjs/styles.css"
+      "import": "./dist/styles.css",
+      "require": "./dist/styles.css"
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "scripts": {
     "dev": "next dev",
@@ -34,6 +36,7 @@
     "react-dom": "^18.0.0 || ^19.0.0"
   },
   "dependencies": {
+    "@harshit0150/reusable-ui-components": "^0.1.18",
     "next": "^15.3.3"
   },
   "devDependencies": {
