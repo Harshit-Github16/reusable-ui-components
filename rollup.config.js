@@ -28,7 +28,8 @@ export default {
     '@fortawesome/fontawesome-svg-core',
     '@fortawesome/free-solid-svg-icons',
     '@fortawesome/react-fontawesome',
-    'next/dynamic'
+    /^next($|\/)/,  // This will match 'next' and all 'next/*' imports
+    /^node:.*/      // Also externalize Node.js built-in modules
   ],
   plugins: [
     resolve(),

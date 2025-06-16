@@ -1,6 +1,6 @@
 'use strict';
 
-var link = require('./node_modules/next/link.js');
+var Link = require('next/link');
 
 var Footer = function () {
   return /*#__PURE__*/React.createElement("footer", {
@@ -21,16 +21,16 @@ var Footer = function () {
     className: "text-xl font-bold"
   }, "Quick Links"), /*#__PURE__*/React.createElement("ul", {
     className: "space-y-2"
-  }, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(link, {
+  }, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Link, {
     href: "/about",
     className: "text-gray-400 hover:text-white transition-colors"
-  }, "About Us")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(link, {
+  }, "About Us")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Link, {
     href: "/services",
     className: "text-gray-400 hover:text-white transition-colors"
-  }, "Services")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(link, {
+  }, "Services")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Link, {
     href: "/contact",
     className: "text-gray-400 hover:text-white transition-colors"
-  }, "Contact")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(link, {
+  }, "Contact")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Link, {
     href: "/privacy",
     className: "text-gray-400 hover:text-white transition-colors"
   }, "Privacy Policy")))), /*#__PURE__*/React.createElement("div", {

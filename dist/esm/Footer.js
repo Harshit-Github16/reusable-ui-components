@@ -1,4 +1,4 @@
-import Link from './node_modules/next/link.js';
+import Link from 'next/link';
 
 var Footer = function () {
   return /*#__PURE__*/React.createElement("footer", {
