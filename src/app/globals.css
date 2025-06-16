@@ -40,19 +40,17 @@
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground antialiased;
-    font-feature-settings: "rlig" 1, "calt" 1;
-  }
-}
+
 
 /* Custom utility classes */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .border-border {
+    border-color: var(--border);
+  }
+  .bg-background {
+    background-color: var(--background);
   }
 }
