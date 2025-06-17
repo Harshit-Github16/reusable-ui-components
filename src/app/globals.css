@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import '@harshit0150/reusable-ui-components/styles.css';
 @layer base {
   :root {
     --background: #ffffff;

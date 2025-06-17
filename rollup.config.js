@@ -3,7 +3,6 @@ import commonjs from '@rollup/plugin-commonjs';
 import babel from '@rollup/plugin-babel';
 import typescript from 'rollup-plugin-typescript2';
 import postcss from 'rollup-plugin-postcss';
-import copy from 'rollup-plugin-copy';
 
 export default {
   input: 'src/components/index.tsx',
@@ -29,15 +28,18 @@ export default {
     '@fortawesome/fontawesome-svg-core',
     '@fortawesome/free-solid-svg-icons',
     '@fortawesome/react-fontawesome',
-    /^next($|\/)/,  // This will match 'next' and all 'next/*' imports
-    /^node:.*/      // Also externalize Node.js built-in modules
+    /^next($|\/)/,
+    /^node:.*/
   ],
   plugins: [
-    resolve(),
+    resolve({
+      extensions: ['.js', '.jsx', '.ts', '.tsx']
+    }),
     commonjs(),
     typescript({
       tsconfig: './tsconfig.json',
-      useTsconfigDeclarationDir: true
+      useTsconfigDeclarationDir: true,
+      declarationDir: './dist'
     }),
     babel({
       babelHelpers: 'bundled',
@@ -45,28 +47,17 @@ export default {
       extensions: ['.js', '.jsx', '.ts', '.tsx']
     }),
     postcss({
+      extract: 'styles.css',
       minimize: true,
       sourceMap: true,
-      config: {
-        path: './postcss.config.mjs',
-      },
-      modules: false,
-      autoModules: false,
-      inject: false,
-      writeDefinitions: false
-    }),
-    copy({
-      targets: [
-        { src: 'src/styles.css', dest: 'dist' }
+      plugins: [
+        require('tailwindcss')('./tailwind.config.js'),
+        require('autoprefixer')
       ]
     })
   ],
   onwarn: function (warning, warn) {
-    // Suppress specific warnings that are safe to ignore for this build setup
-    if (warning.code === 'MODULE_LEVEL_DIRECTIVE') {
-      return; // Ignore 'use client' and similar directives
-    }
-    // Pass all other warnings through
+    if (warning.code === 'MODULE_LEVEL_DIRECTIVE') return;
     warn(warning);
   }
-}; 
+};

@@ -1,6 +1,6 @@
 {
   "name": "@harshit0150/reusable-ui-components",
-  "version": "0.1.22",
+  "version": "0.1.24",
   "private": false,
   "type": "module",
   "main": "./dist/cjs/index.js",
@@ -34,7 +34,7 @@
     "react-dom": "^18.0.0 || ^19.0.0"
   },
   "dependencies": {
-    "@harshit0150/reusable-ui-components": "^0.1.18",
+    "@harshit0150/reusable-ui-components": "file:harshit0150-reusable-ui-components-0.1.24.tgz",
     "next": "^15.3.3"
   },
   "devDependencies": {
@@ -48,17 +48,17 @@
     "@types/node": "24.0.1",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "autoprefixer": "^10.4.17",
+    "autoprefixer": "^10.4.21",
     "eslint": "^9",
     "eslint-config-next": "^15.3.3",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
-    "postcss": "^8.4.35",
+    "postcss": "^8.5.6",
     "rollup": "^4.0.0",
     "rollup-plugin-copy": "^3.5.0",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-typescript2": "^0.36.0",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^3.4.17",
     "typescript": "^5.0.0"
   },
   "publishConfig": {
