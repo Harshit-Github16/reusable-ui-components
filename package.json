@@ -21,7 +21,7 @@
   ],
   "scripts": {
     "dev": "next dev",
-    "build": "rollup -c --bundleConfigAsCjs && cp src/styles.css dist/styles.css",
+    "build": "rm -rf dist && rollup -c --bundleConfigAsCjs && cp dist/esm/styles.css dist/styles.css",
     "start": "next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit"

@@ -1,11 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-    "./dist/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -53,15 +49,7 @@ module.exports = {
     },
   },
   plugins: [],
-  // Ensure Tailwind classes are preserved in production
   safelist: [
-    // Add any dynamic classes that might be used in your components
-    'bg-white',
-    'bg-gray-900',
-    'text-white',
-    'text-gray-400',
-    'text-gray-600',
-    'text-gray-800',
-    'text-gray-900',
+    { pattern: /.*/ }, // Temporarily include all Tailwind classes for diagnostic
   ],
 }; 
