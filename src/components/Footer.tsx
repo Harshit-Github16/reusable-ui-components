@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#1a0f37] text-white py-16 font-sans">
+    <footer className="tw-bg-[#1a0f37] tw-text-white tw-py-16 font-sans">
       <div className="max-w-7xl mx-auto px-8 flex flex-wrap justify-between">
         {/* Left Section: Logo, Social Icons */}
         <div className="flex flex-col items-start w-full md:w-1/3 lg:w-1/4 mb-10 md:mb-0">
