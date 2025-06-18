@@ -39,7 +39,8 @@ export default {
     typescript({
       tsconfig: './tsconfig.json',
       useTsconfigDeclarationDir: true,
-      declarationDir: './dist'
+      declarationDir: './dist',
+      declaration: true
     }),
     babel({
       babelHelpers: 'bundled',

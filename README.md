@@ -1,10 +1,8 @@
-# @harshit0150/reusable-ui-components
+# Reusable UI Components
 
-Reusable Header and Footer components built with Tailwind CSS for React/Next.js projects.
+A collection of reusable React components with built-in Tailwind CSS styling.
 
 ## Installation
-
-Run the following command in your project:
 
 ```bash
 npm install @harshit0150/reusable-ui-components
@@ -12,176 +10,174 @@ npm install @harshit0150/reusable-ui-components
 
 ## Usage
 
-To use the components in your Next.js project with Tailwind CSS, follow these steps:
+### Import Components
 
-### 1. Install the package
-
-If you've just updated the library locally or are installing it for the first time:
-
-```bash
-npm install @harshit0150/reusable-ui-components
-# Or if installing from a local .tgz file (e.g., after `npm pack` in library project):
-# npm install /path/to/your/reusable-ui-components/harshit0150-reusable-ui-components-0.1.24.tgz
-
-# After any update or fresh install, it's recommended to clear cache and reinstall:
-rm -rf node_modules .next && npm install
-```
-
-### 2. Configure Tailwind CSS in your consuming project
-
-Update your `tailwind.config.js` file in your project to include the component library's files in the `content` array. This ensures Tailwind scans and includes the necessary CSS classes from the library.
-
-```javascript
-// tailwind.config.js in your consuming project (e.g., Project A)
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    // ... existing paths like './app/**/*.{js,ts,jsx,tsx,mdx}', './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    // './components/**/*.{js,ts,jsx,tsx,mdx}', './src/**/*.{js,ts,jsx,tsx,mdx}',
-
-    // Add this line to include your reusable-ui-components package
-    './node_modules/@harshit0150/reusable-ui-components/**/*.{js,ts,jsx,tsx}',
-  ],
-  theme: {
-    extend: {
-      // ... your project's theme extensions
-    },
-  },
-  plugins: [
-    // ... your project's Tailwind plugins
-  ],
-}
-```
-
-### 3. Import the Library's CSS
-
-Import the compiled CSS from the component library into your main global CSS file (e.g., `app/globals.css` in Next.js App Router).
-
-```css
-/* globals.css in your consuming project (e.g., Project A) */
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Import your component library's compiled styles */
-@import '@harshit0150/reusable-ui-components/styles.css';
-
-/* ... any other global styles for your project ... */
-```
-
-### 4. Use the Components
-
-Import and use the `Header` and `Footer` components. For Next.js projects, especially if you encounter server-side rendering (SSR) issues or re-rendering loops, it's recommended to use dynamic imports with `ssr: false`.
-
-```javascript
-// Example in a Next.js layout.js or page.js
-import dynamic from 'next/dynamic';
-
-const Header = dynamic(() => import('@harshit0150/reusable-ui-components').then(mod => mod.Header), { ssr: false });
-const Footer = dynamic(() => import('@harshit0150/reusable-ui-components').then(mod => mod.Footer), { ssr: false });
-
-function MyPage() {
-  return (
-    <>
-      <Header />
-      {/* Your page content */}
-      <Footer />
-    </>
-  );
-}
-
-export default MyPage;
-```
-
-Alternatively, for simpler usage without dynamic imports (if no SSR issues are faced):
-
-```javascript
+```jsx
 import { Header, Footer } from '@harshit0150/reusable-ui-components';
-
-function MyComponent() {
-  return (
-    <>
-      <Header />
-      {/* Your content */}
-      <Footer />
-    </>
-  );
-}
+import '@harshit0150/reusable-ui-components/styles.css';
 ```
 
-## Requirements
-- React 17+
-- Tailwind CSS (must be set up and configured in your consuming project)
+### Header Component
 
-## Note
-Make sure your project has Tailwind CSS configured. The components use Tailwind classes, so you need to have Tailwind CSS set up in your project.
-
----
-
-Feel free to customize the components as needed!
-
-## Available Components
-
-### Header
-
-A responsive header component (with a title prop).
-
-Example:
+The Header component is fully customizable and works with any React project:
 
 ```jsx
 import { Header } from '@harshit0150/reusable-ui-components';
 
-<Header title="Your App Title" />
+function App() {
+  const handleLogoClick = () => {
+    console.log('Logo clicked');
+  };
+
+  const handleNavClick = (href) => {
+    console.log('Navigation clicked:', href);
+    // Handle navigation here
+  };
+
+  return (
+    <Header
+      logoText="My App"
+      logoHref="/"
+      navItems={[
+        { label: "Home", href: "/" },
+        { label: "About", href: "/about" },
+        { label: "Services", href: "/services" },
+        { label: "Contact", href: "/contact" }
+      ]}
+      onLogoClick={handleLogoClick}
+      onNavItemClick={handleNavClick}
+    />
+  );
+}
 ```
 
-### Footer
+#### Header Props
 
-A customizable footer component.
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `logoText` | string | "Logo" | Text to display as logo |
+| `logoHref` | string | "/" | Link for the logo |
+| `navItems` | Array | Default navigation items | Array of navigation items with `label` and `href` |
+| `onLogoClick` | function | undefined | Callback when logo is clicked |
+| `onNavItemClick` | function | undefined | Callback when navigation item is clicked |
 
-Example:
+### Footer Component
+
+The Footer component is highly configurable:
 
 ```jsx
-"use client";
-import React, { useState } from 'react';
 import { Footer } from '@harshit0150/reusable-ui-components';
 
-<Footer />
+function App() {
+  const handleLinkClick = (href) => {
+    console.log('Footer link clicked:', href);
+    // Handle footer link clicks here
+  };
+
+  return (
+    <Footer
+      logoText="My Company"
+      logoHref="/"
+      tagline="Building amazing experiences"
+      copyrightText="Copyright © 2024 My Company | All rights reserved"
+      sections={[
+        {
+          title: "Company",
+          links: [
+            { label: "About Us", href: "/about" },
+            { label: "Careers", href: "/careers" },
+            { label: "Contact", href: "/contact" }
+          ]
+        },
+        {
+          title: "Services",
+          links: [
+            { label: "Web Development", href: "/services/web" },
+            { label: "Mobile Apps", href: "/services/mobile" },
+            { label: "Consulting", href: "/services/consulting" }
+          ]
+        }
+      ]}
+      onLinkClick={handleLinkClick}
+    />
+  );
+}
 ```
+
+#### Footer Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `sections` | Array | Default sections | Array of footer sections with `title` and `links` |
+| `logoText` | string | "Your Logo" | Text to display as logo |
+| `logoHref` | string | "/" | Link for the logo |
+| `tagline` | string | "Building amazing experiences" | Company tagline |
+| `copyrightText` | string | "Copyright © 2024 \| All rights reserved" | Copyright text |
+| `onLinkClick` | function | undefined | Callback when footer links are clicked |
+
+## Styling
+
+The components use Tailwind CSS classes. Make sure to include the CSS file in your project:
+
+```jsx
+import '@harshit0150/reusable-ui-components/styles.css';
+```
+
+### Custom Styling
+
+You can override the default styles by adding your own CSS classes or modifying the Tailwind configuration in your project.
+
+## Framework Compatibility
+
+These components are designed to work with:
+- React 18+
+- Any React framework (Next.js, Create React App, Vite, etc.)
+- Any routing solution (React Router, Next.js Router, etc.)
 
 ## Development
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Harshit-Github16/reusable-ui-components.git
-   cd reusable-ui-components
-   ```
+### Prerequisites
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+- Node.js 18+
+- npm or yarn
 
-3. (Optional) Start the development server (if you have a Next.js demo app):
-   ```bash
-   npm run dev
-   ```
+### Setup
 
-4. Build the package (bundles your components):
-   ```bash
-   npm run build
-   ```
+```bash
+git clone <repository-url>
+cd reusable-ui-components
+npm install
+```
 
-5. Link the package to another project:
-   ```bash
-   npm link @harshit0150/reusable-ui-components
-   ```
+### Build
+
+```bash
+npm run build
+```
+
+This will create the `dist` folder with:
+- ESM and CJS builds
+- TypeScript declarations
+- CSS file with all styles
+
+### Development
+
+```bash
+npm run dev
+```
 
 ## Contributing
 
-Contributions are welcome! Feel free to submit a Pull Request.
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
 
 ## License
 
-MIT © harshit0150
-# reusable-ui-components
+MIT License - see LICENSE file for details.
+
+## Support
+
+For issues and questions, please open an issue on GitHub.

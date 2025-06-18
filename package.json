@@ -1,6 +1,6 @@
 {
   "name": "@harshit0150/reusable-ui-components",
-  "version": "0.1.31",
+  "version": "0.1.36",
   "private": false,
   "type": "module",
   "main": "./dist/cjs/index.js",
@@ -12,7 +12,8 @@
       "require": "./dist/cjs/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./styles.css": "./dist/styles.css"
+    "./styles.css": "./dist/styles.css",
+    "./global.css": "./dist/styles.css"
   },
   "files": [
     "dist",
@@ -21,7 +22,7 @@
   ],
   "scripts": {
     "dev": "next dev",
-    "build": "rm -rf dist && rollup -c --bundleConfigAsCjs && cp dist/esm/style.css dist/styles.css",
+    "build": "rm -rf dist && rollup -c --bundleConfigAsCjs && cp dist/esm/styles.css dist/styles.css",
     "start": "next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit"
