@@ -3,6 +3,8 @@ import commonjs from '@rollup/plugin-commonjs';
 import babel from '@rollup/plugin-babel';
 import typescript from 'rollup-plugin-typescript2';
 import postcss from 'rollup-plugin-postcss';
+import copy from 'rollup-plugin-copy';
+import url from '@rollup/plugin-url';
 
 export default {
   input: 'src/components/index.tsx',
@@ -36,6 +38,10 @@ export default {
       extensions: ['.js', '.jsx', '.ts', '.tsx']
     }),
     commonjs(),
+    url({
+      include: ['**/*.svg'],
+      limit: Infinity
+    }),
     typescript({
       tsconfig: './tsconfig.json',
       useTsconfigDeclarationDir: true,
@@ -48,12 +54,17 @@ export default {
       extensions: ['.js', '.jsx', '.ts', '.tsx']
     }),
     postcss({
-      extract: 'styles.css',
+      extract: true,
       minimize: true,
       sourceMap: true,
       plugins: [
         require('tailwindcss')('./tailwind.config.js'),
         require('autoprefixer')
+      ]
+    }),
+    copy({
+      targets: [
+        { src: 'public/images', dest: 'dist' }
       ]
     })
   ],

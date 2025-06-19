@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import '@harshit0150/reusable-ui-components/styles.css';
+@import '../styles.css';
 @layer base {
   :root {
     --background: #ffffff;
@@ -54,3 +54,32 @@
 }
 
 /* Add any custom styles below */ 
+
+.smooth-dropdown {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: top;
+  opacity: 1;
+}
+.tw-scale-y-0 {
+  opacity: 0;
+  pointer-events: none;
+  transform: scaleY(0);
+}
+.tw-scale-y-100 {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scaleY(1);
+}
+.tw-animate-growDown {
+  animation: growDown 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes growDown {
+  0% {
+    transform: scaleY(0.95);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+} 
