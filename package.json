@@ -18,6 +18,7 @@
   "files": [
     "dist",
     "dist/styles.css",
+    "dist/global.css",
     "README.md"
   ],
   "scripts": {
