@@ -1,5 +1,7 @@
 'use strict';
 
+Object.defineProperty(exports, '__esModule', { value: true });
+
 var React = require('react');
 var DesktopFooter = require('./DesktopFooter.js');
 var MobileFooter = require('./MobileFooter.js');
@@ -26,8 +28,8 @@ function useIsMobile() {
 }
 function Footer(props) {
   var isMobile = useIsMobile();
-  return /*#__PURE__*/React.createElement(React.Fragment, null, isMobile ? /*#__PURE__*/React.createElement(MobileFooter, props) : /*#__PURE__*/React.createElement(DesktopFooter, props));
+  return /*#__PURE__*/React.createElement(React.Fragment, null, isMobile ? /*#__PURE__*/React.createElement(MobileFooter.default, props) : /*#__PURE__*/React.createElement(DesktopFooter.default, props));
 }
 
-module.exports = Footer;
+exports.default = Footer;
 //# sourceMappingURL=Footer.js.map

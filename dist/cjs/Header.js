@@ -1,5 +1,7 @@
 'use strict';
 
+Object.defineProperty(exports, '__esModule', { value: true });
+
 var _rollupPluginBabelHelpers = require('./_virtual/_rollupPluginBabelHelpers.js');
 var freeSolidSvgIcons = require('@fortawesome/free-solid-svg-icons');
 var reactFontawesome = require('@fortawesome/react-fontawesome');
@@ -33,52 +35,52 @@ var simulator = require('./public/images/Header/simulator.svg.js');
 
 var menuItems = [{
   label: "Option Chain",
-  icon: option_chain,
+  icon: option_chain.default,
   color: "#D80000",
   url: "/option-chain"
 }, {
   label: "OI Charts",
-  icon: oi_chart,
+  icon: oi_chart.default,
   color: "#04B800",
   url: "/oi-charts"
 }, {
   label: "GIFT NIFTY",
-  icon: giftNiftyFill,
+  icon: giftNiftyFill.default,
   color: "#FFECE4",
   url: "/gift-nifty"
 }, {
   label: "Live Analytics",
-  icon: live_analytices_header,
+  icon: live_analytices_header.default,
   color: "#B98A2C",
   url: "/live-analytics"
 }, {
   label: "Trending OI",
-  icon: bk_trending,
+  icon: bk_trending.default,
   color: "#FE7E36",
   url: "/trending-oi"
 }, {
   label: "OI Timeflow",
-  icon: bk_timeflow,
+  icon: bk_timeflow.default,
   color: "#8579AD",
   url: "/oi-timeflow"
 }, {
   label: "Futures",
-  icon: bk_timeflow,
+  icon: bk_timeflow.default,
   color: "#FB3E82",
   url: "/futures"
 }, {
   label: "TV Chart",
-  icon: live_analytices_header,
+  icon: live_analytices_header.default,
   color: "#131722",
   url: "/tv-chart"
 }, {
   label: "Option Simulator",
-  icon: simulator,
+  icon: simulator.default,
   color: "#577EA4",
   url: "/option-simulator"
 }, {
   label: "Movers",
-  icon: shopping_cart,
+  icon: shopping_cart.default,
   color: "#BC3081",
   url: "/movers"
 }];
@@ -234,7 +236,7 @@ function Header(props) {
     href: "/",
     className: "tw-flex tw-items-center"
   }, /*#__PURE__*/React.createElement(Image, {
-    src: logo,
+    src: logo.default,
     alt: "Logo",
     width: 100,
     height: 100,
@@ -242,7 +244,7 @@ function Header(props) {
     priority: true
   })), /*#__PURE__*/React.createElement("div", {
     className: "tw-relative tw-lg-flex tw-items-center lg:tw-block  tw-mx-3"
-  }, /*#__PURE__*/React.createElement(StockSearchBar, _rollupPluginBabelHelpers.extends({}, stockSearchBarProps, {
+  }, /*#__PURE__*/React.createElement(StockSearchBar.default, _rollupPluginBabelHelpers.extends({}, stockSearchBarProps, {
     isDarkMode: isDarkMode,
     getGlobalSearchData: getGlobalSearchData
   })))), /*#__PURE__*/React.createElement("ul", {
@@ -304,7 +306,7 @@ function Header(props) {
   }, /*#__PURE__*/React.createElement(Image, {
     alt: "Go Prime",
     title: "Go Prime",
-    src: Premium,
+    src: Premium.default,
     width: 25,
     height: 25
   }), " ", /*#__PURE__*/React.createElement("span", {
@@ -318,13 +320,13 @@ function Header(props) {
   }, /*#__PURE__*/React.createElement(Image, {
     alt: "Special Offer",
     title: "special offer",
-    src: Premium,
+    src: Premium.default,
     width: 25,
     height: 25
   }), /*#__PURE__*/React.createElement("span", {
     className: "max-xl:tw-hidden tw-text-nowrap"
   }, "Special Offer"))), !isDarkMode ? /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Image, {
-    src: menuVisible == 3 ? menu_blue : menu,
+    src: menuVisible == 3 ? menu_blue.default : menu.default,
     alt: "Menu",
     title: "Menu",
     width: 18,
@@ -334,7 +336,7 @@ function Header(props) {
       return handleMenuToggle(e, 3);
     }
   })) : /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Image, {
-    src: menuVisible == 3 ? menu_blue : menu_white,
+    src: menuVisible == 3 ? menu_blue.default : menu_white.default,
     alt: "Menu",
     title: "Menu",
     width: 18,
@@ -351,7 +353,7 @@ function Header(props) {
     },
     href: "/checkout"
   }, /*#__PURE__*/React.createElement(Image, {
-    src: !isDarkMode ? shopping_cart : shopping_cart_white,
+    src: !isDarkMode ? shopping_cart.default : shopping_cart_white.default,
     alt: "shopping cart",
     title: "shopping cart",
     width: 24,
@@ -360,7 +362,7 @@ function Header(props) {
   }), /*#__PURE__*/React.createElement("div", {
     className: "tw-w-2 tw-h-2 tw-bg-[#e6191e] tw-rounded-full tw-absolute tw-top-0 tw-right-0"
   }))), isLoggedIn && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Image, {
-    src: !isDarkMode ? notifications_active : notifications_white,
+    src: !isDarkMode ? notifications_active.default : notifications_white.default,
     alt: "notification",
     title: "notification",
     width: 24,
@@ -372,7 +374,7 @@ function Header(props) {
   }), notificationData && /*#__PURE__*/React.createElement("div", {
     className: "tw-p-4 tw-flex tw-gap-3 tw-absolute ".concat(notificationData.length > 0 ? 'tw-h-[400px]' : '', " tw-top-[54px] tw-justify-center tw-right-[180px] tw-w-1/4 tw-rounded tw-bg-white dark:tw-bg-black tw-w-25 tw-mt-3 tw-overflow-auto tw-shadow-custom dark:tw-shadow-custom-dark smooth-dropdown ").concat(menuVisible == 5 ? 'tw-scale-y-100' : '-tw-scale-y-0')
   }, /*#__PURE__*/React.createElement("div", null, notificationData.length > 0 ? notificationData.map(function (item, key) {
-    var sentDate = moment(item.sent_date);
+    var sentDate = moment.default(item.sent_date);
     var formattedDate = sentDate.format("DD-MM-YYYY");
     var formattedTime = sentDate.format("hh:mm A");
     return /*#__PURE__*/React.createElement("div", {
@@ -390,7 +392,7 @@ function Header(props) {
     }, item.notification_title), /*#__PURE__*/React.createElement("span", {
       className: "tw-text-[#999999] tw-flex tw-items-center tw-justify-between tw-text-sm tw-gap-2"
     }, /*#__PURE__*/React.createElement(Image, {
-      src: schedule,
+      src: schedule.default,
       alt: "notification time",
       title: "notification time",
       width: 20,
@@ -410,7 +412,7 @@ function Header(props) {
   }, userName), crownType && crownType != 'non-prime' && /*#__PURE__*/React.createElement("div", {
     className: "tw-relative"
   }, /*#__PURE__*/React.createElement(Image, {
-    src: crownType == "combo-prime" ? combo_crown : crownType == "nt-prime" ? nt_prime_crown : crownType == "os-prime" ? nt_os_crown : '',
+    src: crownType == "combo-prime" ? combo_crown.default : crownType == "nt-prime" ? nt_prime_crown.default : crownType == "os-prime" ? nt_os_crown.default : '',
     alt: crownType,
     title: crownType,
     width: 23,
@@ -428,7 +430,7 @@ function Header(props) {
   }, isDarkMode ? "Dark" : "Light")))) : /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("button", {
     className: "tw-py-1 tw-px-3 xl:tw-px-4 tw-text-sm xl:tw-text-base tw-outline-none tw-text-white tw-bg-primary-text tw-rounded-[4px] tw-font-semibold tw-border-primary-text tw-border   hover:tw-bg-white dark:tw-bg-[#333] hover:tw-text-primary-text",
     onClick: onLoginPopup
-  }, "Login / Register"))), /*#__PURE__*/React.createElement(HeaderDropdown, {
+  }, "Login / Register"))), /*#__PURE__*/React.createElement(HeaderDropdown.default, {
     isFullUrl: isFullUrl,
     menuVisible: menuVisible,
     setMenuVisible: setMenuVisible,
@@ -441,7 +443,7 @@ function Header(props) {
     handleRouting: handleRouting
   })), !(isHomePage || isOptionStrategy || isPrimePlans) && /*#__PURE__*/React.createElement("div", {
     className: "tw-m-0 tw-p-0 lg:tw-block tw-hidden"
-  }, /*#__PURE__*/React.createElement(HeaderQuickLinks, {
+  }, /*#__PURE__*/React.createElement(HeaderQuickLinks.default, {
     handleRouting: handleRouting,
     isShowSubscriptionBtn: isShowSubscriptionBtn,
     isSubscriptionPopupOpen: isSubscriptionPopupOpen,
@@ -480,5 +482,5 @@ function Header(props) {
   }, "+91 94685 47504"))));
 }
 
-module.exports = Header;
+exports.default = Header;
 //# sourceMappingURL=Header.js.map

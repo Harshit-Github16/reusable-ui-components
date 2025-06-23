@@ -9,19 +9,19 @@ var whatsapp_icon = require('./public/images/whatsapp_icon.svg.js');
 
 const socialLinks = [{
   link: 'https://www.facebook.com/niftytraderin',
-  icon: facebook
+  icon: facebook.default
 }, {
   link: 'https://twitter.com/niftytraderin',
-  icon: twitter
+  icon: twitter.default
 }, {
   link: 'https://www.youtube.com/@NiftyTraderIndia',
-  icon: youtube
+  icon: youtube.default
 }, {
   link: 'https://www.linkedin.com/company/niftytrader',
-  icon: linkedin
+  icon: linkedin.default
 }, {
   link: 'https://www.instagram.com/niftytraderindia',
-  icon: instagram
+  icon: instagram.default
 },
 // {
 //   link: 'https://t.me/NiftyTraderIn',
@@ -29,7 +29,7 @@ const socialLinks = [{
 // },
 {
   link: 'https://www.whatsapp.com/channel/0029VaiRoySATRShrjVYRu2O',
-  icon: whatsapp_icon
+  icon: whatsapp_icon.default
 }];
 const navItems = [{
   label: "Important Links",

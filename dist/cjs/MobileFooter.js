@@ -1,5 +1,7 @@
 'use strict';
 
+Object.defineProperty(exports, '__esModule', { value: true });
+
 var Link = require('next/link');
 var Image = require('next/image');
 var React = require('react');
@@ -48,7 +50,7 @@ function MobileFooter(_a) {
     },
     href: "/"
   }, /*#__PURE__*/React.createElement(Image, {
-    src: logoDark,
+    src: logoDark.default,
     alt: "Logo",
     width: 152,
     height: 35,
@@ -81,7 +83,7 @@ function MobileFooter(_a) {
     href: "https://play.google.com/store/apps/details?id=in.niftytrader&hl=en_IN",
     target: "_blank"
   }, /*#__PURE__*/React.createElement(Image, {
-    src: play_store,
+    src: play_store.default,
     alt: "icon",
     width: 116,
     height: 35,
@@ -90,7 +92,7 @@ function MobileFooter(_a) {
     href: "https://apps.apple.com/us/app/niftytrader/id1587483980",
     target: "_blank"
   }, /*#__PURE__*/React.createElement(Image, {
-    src: app_store,
+    src: app_store.default,
     alt: "icon",
     width: 116,
     height: 35,
@@ -169,5 +171,5 @@ function MobileFooter(_a) {
   }, "All rights reserved ver ", process.env.VERSION))));
 }
 
-module.exports = MobileFooter;
+exports.default = MobileFooter;
 //# sourceMappingURL=MobileFooter.js.map

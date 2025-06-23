@@ -14,7 +14,8 @@ export default {
       format: 'cjs',
       sourcemap: true,
       preserveModules: true,
-      preserveModulesRoot: 'src/components'
+      preserveModulesRoot: 'src/components',
+      exports: 'named'
     },
     {
       dir: 'dist/esm',

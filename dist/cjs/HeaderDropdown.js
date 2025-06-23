@@ -1,5 +1,7 @@
 'use strict';
 
+Object.defineProperty(exports, '__esModule', { value: true });
+
 var freeSolidSvgIcons = require('@fortawesome/free-solid-svg-icons');
 var reactFontawesome = require('@fortawesome/react-fontawesome');
 var Image = require('next/image');
@@ -118,7 +120,7 @@ var HeaderDropDown = function (_a) {
     }, /*#__PURE__*/React.createElement("div", {
       className: "tw-bg-white dark:tw-bg-[#111111] tw-p-1 tw-rounded-full tw-me-2 tw-flex tw-justify-center tw-items-center"
     }, /*#__PURE__*/React.createElement(Image, {
-      src: strategy_builder,
+      src: strategy_builder.default,
       width: 27,
       height: 27,
       alt: "option strategy logo",
@@ -133,7 +135,7 @@ var HeaderDropDown = function (_a) {
     }, /*#__PURE__*/React.createElement("div", {
       className: "tw-bg-white dark:tw-bg-[#111111] tw-rounded-full tw-me-2 tw-flex tw-justify-center tw-items-center"
     }, /*#__PURE__*/React.createElement(Image, {
-      src: isDarkMode ? gift_nifty_dark : gift_nifty,
+      src: isDarkMode ? gift_nifty_dark.default : gift_nifty.default,
       width: 35,
       height: 35,
       alt: "gift nifty",
@@ -149,7 +151,7 @@ var HeaderDropDown = function (_a) {
     }, /*#__PURE__*/React.createElement("div", {
       className: "tw-bg-white shine dark:tw-bg-[#111111] tw-p-1 tw-rounded-full tw-me-2 tw-flex tw-justify-center tw-items-center"
     }, /*#__PURE__*/React.createElement(Image, {
-      src: gold,
+      src: gold.default,
       width: 27,
       height: 27,
       alt: "gold price today logo",
@@ -164,7 +166,7 @@ var HeaderDropDown = function (_a) {
     }, /*#__PURE__*/React.createElement("div", {
       className: "tw-bg-white shine dark:tw-bg-[#111111] tw-p-1 tw-rounded-full tw-me-2 tw-flex tw-justify-center tw-items-center"
     }, /*#__PURE__*/React.createElement(Image, {
-      src: silver,
+      src: silver.default,
       width: 27,
       height: 27,
       alt: "silver price today logo",
@@ -382,7 +384,7 @@ var HeaderDropDown = function (_a) {
   }, /*#__PURE__*/React.createElement("div", {
     className: "tw-border tw-w-max"
   }, /*#__PURE__*/React.createElement(Image, {
-    src: menuQrCode,
+    src: menuQrCode.default,
     alt: "QR",
     title: "qr code",
     width: 200,
@@ -456,7 +458,7 @@ var HeaderDropDown = function (_a) {
       href: "https://play.google.com/store/apps/details?id=in.niftytrader&hl=en_IN",
       className: "tw-flex tw-items-center tw-justify-center"
     }, /*#__PURE__*/React.createElement(Image, {
-      src: play_store_logo,
+      src: play_store_logo.default,
       width: 24,
       height: 24,
       alt: item.label,
@@ -467,7 +469,7 @@ var HeaderDropDown = function (_a) {
       href: "https://apps.apple.com/us/app/nifty-trader/id1587483980",
       className: "tw-flex tw-items-center tw-justify-center"
     }, /*#__PURE__*/React.createElement(Image, {
-      src: apple_store_logo,
+      src: apple_store_logo.default,
       width: 25,
       height: 25,
       alt: item.label,
@@ -500,5 +502,5 @@ var HeaderDropDown = function (_a) {
   }))));
 };
 
-module.exports = HeaderDropDown;
+exports.default = HeaderDropDown;
 //# sourceMappingURL=HeaderDropdown.js.map

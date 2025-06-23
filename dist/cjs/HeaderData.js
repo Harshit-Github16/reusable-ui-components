@@ -51,7 +51,7 @@ var references = require('./public/images/Header/references.svg.js');
 
 const analyticsData = [{
   title: "SCREENER",
-  imageUrl: screener,
+  imageUrl: screener.default,
   description: null,
   items: [{
     title: "Advanced Stock Screener",
@@ -73,7 +73,7 @@ const analyticsData = [{
   title: "LIVE ANALYTICS",
   tag: "Prime",
   description: "Real time Market Trend, Central pivot range and detail information for Indices and stocks.",
-  imageUrl: live_analytices_header,
+  imageUrl: live_analytices_header.default,
   items: [{
     title: "Nifty Live Analytics",
     description: null,
@@ -102,7 +102,7 @@ const analyticsData = [{
   }]
 }, {
   title: "MARKET ACTION",
-  imageUrl: market_action,
+  imageUrl: market_action.default,
   items: [{
     title: "Opening Price Clues",
     description: null,
@@ -136,7 +136,7 @@ const analyticsData = [{
   }]
 }, {
   title: "STOCK TRACKING",
-  imageUrl: stocksTracking,
+  imageUrl: stocksTracking.default,
   items: [{
     title: "GPT Alerts and Watchlist",
     description: null,
@@ -178,7 +178,7 @@ const analyticsData = [{
 }, {
   title: "CONTRIBUTORS",
   description: "Keep Track of Real time trend of NSE/BSE indices contributors",
-  imageUrl: contributors_header,
+  imageUrl: contributors_header.default,
   items: [{
     title: "Nifty 50 Contributors",
     description: null,
@@ -218,7 +218,7 @@ const analyticsData = [{
 }];
 const backTestingData = [{
   title: "OPTION SIMULATOR",
-  imageUrl: simulator,
+  imageUrl: simulator.default,
   description: "Back Test, model and analyze the potential outcomes of trading strategies along with pre built",
   items: [{
     title: "Nifty Option Simulator",
@@ -238,7 +238,7 @@ const backTestingData = [{
   }]
 }, {
   title: "INTRADAY BACKTEST",
-  imageUrl: bk_intraday,
+  imageUrl: bk_intraday.default,
   tag: "Prime",
   description: "Back Test and model all your Intraday Trade strategies with our pre built strategies ",
   items: [{
@@ -264,7 +264,7 @@ const backTestingData = [{
   }]
 }, {
   title: "TRENDING OI",
-  imageUrl: bk_trending,
+  imageUrl: bk_trending.default,
   tag: "Prime",
   description: "Check the calculated change of direction of market and accurate sentiment analysis of intraday market",
   items: [{
@@ -285,7 +285,7 @@ const backTestingData = [{
   }]
 }, {
   title: "MULTI STRIKE COMPARISON",
-  imageUrl: bk_multistrike,
+  imageUrl: bk_multistrike.default,
   description: "Get the Call and Put OI, Vol, PCR, LTP , change in OI comparison chart on more strikes.",
   items: [{
     title: "Nifty",
@@ -310,7 +310,7 @@ const backTestingData = [{
   }]
 }, {
   title: "OI TIMEFLOW",
-  imageUrl: bk_timeflow,
+  imageUrl: bk_timeflow.default,
   description: "Check the Intraday Option chain and get the complete day's LTP calculation at one step.",
   items: [{
     title: "Nifty OI Timeflow",
@@ -346,7 +346,7 @@ const backTestingData = [{
 }];
 const optionsData = [{
   title: "OPTION CHAIN",
-  imageUrl: option_chain,
+  imageUrl: option_chain.default,
   description: "Get Technical study & Download Greeks of Option Chain with live quotes",
   items: [{
     title: "NSE Option Chain",
@@ -366,7 +366,7 @@ const optionsData = [{
   }]
 }, {
   title: "OI CHART",
-  imageUrl: pcr,
+  imageUrl: pcr.default,
   tag: "Prime",
   description: "Get line chart and bar chart view for all indices and F&O stocks open interest",
   items: [{
@@ -402,7 +402,7 @@ const optionsData = [{
   }]
 }, {
   title: "CHANGE IN OI",
-  imageUrl: change_oi,
+  imageUrl: change_oi.default,
   description: "Get line chart and bar chart view for all indices and F&O stocks change in OI",
   items: [{
     title: "Nifty",
@@ -437,7 +437,7 @@ const optionsData = [{
   }]
 }, {
   title: "PCR",
-  imageUrl: oi_chart,
+  imageUrl: oi_chart.default,
   description: "Get updated Put call ratio(PCR) charts of all Indices and F&O stocks",
   items: [{
     title: "Nifty",
@@ -472,7 +472,7 @@ const optionsData = [{
   }]
 }, {
   title: "VOLUME PCR",
-  imageUrl: vol_pcr,
+  imageUrl: vol_pcr.default,
   tag: "Prime",
   description: "Get updated Volume Put call ratio(PCR) charts of all Indices and F&O stocks",
   items: [{
@@ -508,7 +508,7 @@ const optionsData = [{
   }]
 }, {
   title: "LIVE MAX PAIN",
-  imageUrl: max_pain,
+  imageUrl: max_pain.default,
   description: "Get Live max pain chart of all indices and F&O stocks, Sensex",
   items: [{
     title: "Nifty",
@@ -544,7 +544,7 @@ const optionsData = [{
 }];
 const resourcesData = [{
   title: "IPO",
-  imageUrl: ipo,
+  imageUrl: ipo.default,
   description: null,
   tag: null,
   items: [{
@@ -580,7 +580,7 @@ const resourcesData = [{
   }]
 }, {
   title: "STATS",
-  imageUrl: stats,
+  imageUrl: stats.default,
   description: null,
   tag: null,
   items: [{
@@ -601,7 +601,7 @@ const resourcesData = [{
   }]
 }, {
   title: "DAILY STATS",
-  imageUrl: daily_stats,
+  imageUrl: daily_stats.default,
   description: null,
   tag: null,
   items: [{
@@ -637,7 +637,7 @@ const resourcesData = [{
   }]
 }, {
   title: "BROKERS",
-  imageUrl: broker,
+  imageUrl: broker.default,
   description: null,
   tag: null,
   items: [{
@@ -658,7 +658,7 @@ const resourcesData = [{
   }]
 }, {
   title: "CALCULATOR",
-  imageUrl: calculator,
+  imageUrl: calculator.default,
   description: null,
   tag: null,
   items: [{
@@ -689,7 +689,7 @@ const resourcesData = [{
   }]
 }, {
   title: "REFERENCES",
-  imageUrl: references,
+  imageUrl: references.default,
   description: null,
   tag: null,
   items: [
@@ -720,42 +720,42 @@ const resourcesData = [{
 // menu data
 const barsMenuData = [{
   label: "Advanced Stock Screener",
-  icon: advance_stock,
+  icon: advance_stock.default,
   pageUrl: "/advanced-stock-screener?utm_source=Menu&utm_medium=Header-Dropdown&utm_campaign=Click-Track",
   bg: "#F1FFF1"
 }, {
   label: "Live Market Screener",
-  icon: live_market,
+  icon: live_market.default,
   bg: "#FFEAEA",
   pageUrl: "/stock-screener?utm_source=Menu&utm_medium=Header-Dropdown&utm_campaign=Click-Track"
 }, {
   label: "Options Screener",
-  icon: option_screener_bar,
+  icon: option_screener_bar.default,
   bg: "#ECF5FE",
   pageUrl: "/options-screener?utm_source=Menu&utm_medium=Header-Dropdown&utm_campaign=Click-Track"
 }, {
   label: "NSE Option Chain",
-  icon: link_oc,
+  icon: link_oc.default,
   bg: "#F3E8FF",
   pageUrl: "/nse-option-chain?utm_source=Menu&utm_medium=Header-Dropdown&utm_campaign=Click-Track"
 }, {
   label: "BSE Option Chain",
-  icon: flowsheet,
+  icon: flowsheet.default,
   bg: "#FFEFFC",
   pageUrl: "/bse-option-chain?utm_source=Menu&utm_medium=Header-Dropdown&utm_campaign=Click-Track"
 }, {
   label: "Stock Analysis",
-  icon: bid_landscape,
+  icon: bid_landscape.default,
   bg: "#FFF6E4",
   pageUrl: "/stocks-analysis?utm_source=Menu&utm_medium=Header-Dropdown&utm_campaign=Click-Track"
 }, {
   label: "GPT Watchlist",
-  icon: watch_list_bar,
+  icon: watch_list_bar.default,
   bg: "#E7FAFF",
   pageUrl: "/watchlist?utm_source=Menu&utm_medium=Header-Dropdown&utm_campaign=Click-Track"
 }, {
   label: "GIFT NIFTY",
-  icon: giftNiftyFill,
+  icon: giftNiftyFill.default,
   bg: "#FFECE4",
   pageUrl: "/gift-nifty-live?utm_source=Menu&utm_medium=Header-Dropdown&utm_campaign=Click-Track"
 },
@@ -768,32 +768,32 @@ const barsMenuData = [{
 
 {
   label: "TV Chart",
-  icon: Tv_chart_logo,
+  icon: Tv_chart_logo.default,
   bg: "#333333",
   pageUrl: "/share-price-chart/nifty-50?utm_source=Menu&utm_medium=Header-Dropdown&utm_campaign=Click-Track"
 }, {
   label: "IPO",
-  icon: ipo_bar,
+  icon: ipo_bar.default,
   bg: "#ECF5FE",
   pageUrl: "/ipo?utm_source=Menu&utm_medium=Header-Dropdown&utm_campaign=Click-Track"
 }, {
   label: "Strategy Builder",
-  icon: model_training,
+  icon: model_training.default,
   bg: "#F3E8FF",
   pageUrl: "/option-strategy-builder?utm_source=Menu&utm_medium=Header-Dropdown&utm_campaign=Click-Track"
 }, {
   label: "Options Simulator",
-  icon: table_chart_view_os,
+  icon: table_chart_view_os.default,
   bg: "#FFEFFC",
   pageUrl: "/options-simulator/nifty?utm_source=Menu&utm_medium=Header-Dropdown&utm_campaign=Click-Track"
 }, {
   label: "Prime",
-  icon: Premium,
+  icon: Premium.default,
   bg: "#FFF6E4",
   pageUrl: "/primeplans?utm_source=Menu&utm_medium=Header-Dropdown&utm_campaign=Click-Track"
 }, {
   label: "Blog",
-  icon: news,
+  icon: news.default,
   bg: "#E7FAFF",
   pageUrl: "/content/?utm_source=Menu&utm_medium=Header-Dropdown&utm_campaign=Click-Track"
 }];
@@ -801,43 +801,43 @@ const barsMenuData = [{
 // profile data
 const profileData = [{
   label: "My Profile",
-  icon: person,
+  icon: person.default,
   pageUrl: "/my-profile?utm_source=Menu&utm_medium=Header-Dropdown&utm_campaign=Click-Track"
 }, {
   label: "My Dashboard",
-  icon: dashboard,
+  icon: dashboard.default,
   pageUrl: "/my-dashboard?utm_source=Menu&utm_medium=Header-Dropdown&utm_campaign=Click-Track"
 }, {
   label: "My Watchlist",
-  icon: bookmark_blue,
+  icon: bookmark_blue.default,
   pageUrl: "/watchlist?utm_source=Menu&utm_medium=Header-Dropdown&utm_campaign=Click-Track"
 }, {
   label: "My Alerts",
-  icon: alarm,
+  icon: alarm.default,
   pageUrl: "/stockalerts?utm_source=Menu&utm_medium=Header-Dropdown&utm_campaign=Click-Track"
 }, {
   label: "My Portfolio",
-  icon: contract,
+  icon: contract.default,
   pageUrl: "/portfolio?utm_source=Menu&utm_medium=Header-Dropdown&utm_campaign=Click-Track"
 }, {
   label: "Share a Trial",
-  icon: share,
+  icon: share.default,
   pageUrl: "/share-a-trial?utm_source=Menu&utm_medium=Header-Dropdown&utm_campaign=Click-Track"
 }, {
   label: "Social Media",
-  icon: diversity_1,
+  icon: diversity_1.default,
   pageUrl: ""
 }, {
   label: "Change Password",
-  icon: lock_reset,
+  icon: lock_reset.default,
   pageUrl: ""
 }, {
   label: "Download App",
-  icon: app_promo,
+  icon: app_promo.default,
   pageUrl: ""
 }, {
   label: "Logout",
-  icon: logout,
+  icon: logout.default,
   pageUrl: ""
 }];
 

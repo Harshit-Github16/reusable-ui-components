@@ -1,5 +1,7 @@
 'use strict';
 
+Object.defineProperty(exports, '__esModule', { value: true });
+
 var _rollupPluginBabelHelpers = require('./_virtual/_rollupPluginBabelHelpers.js');
 var React = require('react');
 var index = require('./node_modules/prop-types/index.js');
@@ -38,13 +40,13 @@ function StockSearchBar(_a) {
   }, /*#__PURE__*/React.createElement("span", {
     className: "tw-top-[9px] tw-start-[9px] tw-absolute tw-z-[102] max-2xl:tw-w-[15px] max-2xl:tw-h-[15px]"
   }, isDarkMode && /*#__PURE__*/React.createElement(Image, {
-    src: searchWhite,
+    src: searchWhite.default,
     alt: "search",
     title: "search",
     width: 20,
     height: 20
   }) || /*#__PURE__*/React.createElement(Image, {
-    src: search,
+    src: search.default,
     alt: "search",
     title: "search",
     width: 20,
@@ -66,17 +68,17 @@ function StockSearchBar(_a) {
   })));
 }
 StockSearchBar.propTypes = {
-  isSearchStockStatus: index.bool,
-  stockListData: index.array,
-  inputFocus: index.bool,
-  setShowLoginPopup: index.func,
-  changeSearchStockStatus: index.func,
-  addSymbols: index.func,
-  getSymbol: index.bool
+  isSearchStockStatus: index.default.bool,
+  stockListData: index.default.array,
+  inputFocus: index.default.bool,
+  setShowLoginPopup: index.default.func,
+  changeSearchStockStatus: index.default.func,
+  addSymbols: index.default.func,
+  getSymbol: index.default.bool
 };
 StockSearchBar.defaultProps = {
   inputFocus: false
 };
 
-module.exports = StockSearchBar;
+exports.default = StockSearchBar;
 //# sourceMappingURL=StockSearchBar.js.map

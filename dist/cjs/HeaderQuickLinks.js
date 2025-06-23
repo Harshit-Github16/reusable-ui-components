@@ -1,5 +1,7 @@
 'use strict';
 
+Object.defineProperty(exports, '__esModule', { value: true });
+
 var React = require('react');
 var Image = require('next/image');
 var Link = require('next/link');
@@ -34,45 +36,45 @@ var URLConfig = {
 };
 var menuItems = [{
   title: 'Option Chain',
-  image: link_3x,
+  image: link_3x.default,
   pageUrls: URLConfig.optionChain
 }, {
   title: 'OI Charts',
-  image: stacked_bar_chart,
+  image: stacked_bar_chart.default,
   pageUrls: URLConfig.oiCharts
 }, {
   title: 'GIFT NIFTY',
-  image: giftNiftySets1,
+  image: giftNiftySets1.default,
   pageUrls: URLConfig.giftNifty
 }, {
   title: 'Live Analytics',
-  image: waterfall_chart__1_,
+  image: waterfall_chart__1_.default,
   pageUrls: URLConfig.liveAnalytics
 }, {
   title: 'Trending OI',
-  image: chart_data__1_,
+  image: chart_data__1_.default,
   pageUrls: URLConfig.trendingOi
 }, {
   title: 'OI Timeflow',
-  image: avg_time__1_,
+  image: avg_time__1_.default,
   pageUrls: URLConfig.oiTimeflow
 }, {
   title: 'Futures',
-  image: finance__1_,
+  image: finance__1_.default,
   pageUrls: URLConfig.futures
 }, {
   title: 'TV Chart',
-  image: tv_icon,
+  image: tv_icon.default,
   pageUrls: URLConfig.tvChart
 },
 // Opens in a new tab
 {
   title: 'Option Simulator',
-  image: table_chart_view__1_,
+  image: table_chart_view__1_.default,
   pageUrls: URLConfig.optionSimulator
 }, {
   title: 'Movers',
-  image: diversity_2,
+  image: diversity_2.default,
   pageUrls: URLConfig.movers
 }];
 var getBgClass = function (title) {
@@ -272,13 +274,13 @@ var HeaderQuickLinks = function (props) {
     },
     className: "tw-absolute tw-h-[34.5px] dark:tw-bg-[#333] tw-bg-white tw-left-[0px] tw-z-10 tw-top-[-2%] -tw-translate-y-1/2 tw-cursor-pointer"
   }, /*#__PURE__*/React.createElement(Image, {
-    src: arrow_left_Dark,
+    src: arrow_left_Dark.default,
     alt: "left icon",
     width: 25,
     height: 25,
     className: "tw-pt-[2px] dark:tw-hidden"
   }), /*#__PURE__*/React.createElement(Image, {
-    src: arrow_left_light1,
+    src: arrow_left_light1.default,
     alt: "left icon",
     width: 25,
     height: 25,
@@ -368,13 +370,13 @@ var HeaderQuickLinks = function (props) {
     },
     className: "tw-cursor-pointer tw-absolute tw-h-[34.5px] dark:tw-bg-[#333] tw-right-[0px] tw-bg-white tw-top-[-2%] -tw-translate-y-1/2"
   }, /*#__PURE__*/React.createElement(Image, {
-    src: arrow_right_dark,
+    src: arrow_right_dark.default,
     alt: "right icon",
     width: 25,
     height: 25,
     className: "tw-pt-[2px] dark:tw-hidden"
   }), /*#__PURE__*/React.createElement(Image, {
-    src: arrow_right_Light,
+    src: arrow_right_Light.default,
     alt: "right icon",
     width: 25,
     height: 25,
@@ -382,5 +384,5 @@ var HeaderQuickLinks = function (props) {
   })));
 };
 
-module.exports = HeaderQuickLinks;
+exports.default = HeaderQuickLinks;
 //# sourceMappingURL=HeaderQuickLinks.js.map
